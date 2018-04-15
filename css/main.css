@@ -1,0 +1,164 @@
+html, body {
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    color: #3E3E3F;
+}
+
+a {
+    color: #3E3E3F;
+}
+
+.full_height {
+    height: 100%;
+}
+
+.background {
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: -1;
+    background-color: #eed67a;
+}
+
+
+
+.header {
+    height: 60px;
+}
+
+.header .logo {
+    height: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+.header .links {
+    height: 60px;
+    line-height: 56px;
+    letter-spacing: 2px;
+    text-align: right;
+    color: #3E3E3F;
+}
+
+.header .links a {
+    vertical-align: middle;
+}
+
+.header .navigation_link {
+    font-size: 14px;
+}
+
+.header .social_link {
+    font-size: 20px;
+}
+
+.about {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-top: 2px solid rgba(183, 150, 24, 0.1);
+    border-bottom: 2px solid rgba(183, 150, 24, 0.1);
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.partial_post {
+	width: 100%;
+	margin-bottom: 40px;
+	background-color: rgba(0,0,0,.05);
+    border-radius: 2px;
+    border: 2px solid rgba(183, 150, 24, 0.1);
+}
+
+.partial_post_banner {
+	height: 420px;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+    cursor: pointer;
+}
+
+.partial_post_header {
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	padding: 15px;
+	background-color: rgba(238, 214, 122, .7);
+}
+
+.partial_post_title {
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.partial_post_subtitle {
+	font-size: 14px;
+}
+
+.partial_post_author_image {
+	height:30px;
+	width:30px;
+	float: left;
+	margin-right: 15px;
+	border-radius: 30px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.partial_post_type_icon {
+	float: right;
+	padding: 15px;
+	font-size: 18px;
+}
+
+.partial_post_social_icons {
+	position: relative;
+	bottom: 2px;
+	text-align:right; 
+	vertical-align:top; 
+	white-space: nowrap;
+}
+
+.partial_post_social_icon {
+	cursor: pointer;
+}
+
+.partial_post_image {
+	max-height: 150px;
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	border-radius: 3px;
+}
+
+.beat_store {
+    width: 100%;
+    border: 2px solid rgba(183, 150, 24, 0.1);
+}
+
+.container {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+	}
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 992px;
+	}
+}
