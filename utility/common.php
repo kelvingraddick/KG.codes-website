@@ -57,6 +57,10 @@ EOF;
         return $metatags;
     }
 
+    function clean_quotes($string) {
+        return str_replace('"', '&quot;', $string);
+    }
+
 	function mysqli_result($mysqli, $sql) {
 		$result = $mysqli->query($sql);
 		$value = $result->fetch_array(MYSQLI_NUM);
