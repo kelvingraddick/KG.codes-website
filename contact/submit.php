@@ -36,7 +36,7 @@
     $to = new SendGrid\Email($first_name." ".$last_name, $email_address);
     $content = new SendGrid\Content("text/plain", "Thank you for contacting ".$site_name."! We will be in contact soon!");
     $mail = new SendGrid\Mail($from, $subject, $to, $content);
-    $apiKey = "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"; // getenv('SENDGRID_API_KEY');
+    $apiKey = getenv('SENDGRID_API_KEY');
     $sg = new \SendGrid($apiKey);
     $response = $sg->client->mail()->send()->post($mail);
     echo $response->statusCode();
