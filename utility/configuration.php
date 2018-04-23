@@ -1,11 +1,11 @@
 <?php
 
-    $site_name = "KG The Maker";
+    $site_name = "name";
 
 	$database_host = "localhost";
 	$database_username = "username";
 	$database_password = "password";
 	$database_name = "name";
 
-    putenv("SENDGRID_API_KEY=key");
+    $sendgrid_api_key = "key";
 ?>

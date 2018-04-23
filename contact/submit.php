@@ -31,48 +31,14 @@
 		}
     }
 
-    $from = new SendGrid\Email($site_name, $setting['email_address']);
-    $subject = "Thank you for contacting ".$site_name."!";
-    $to = new SendGrid\Email($first_name." ".$last_name, $email_address);
-    $content = new SendGrid\Content("text/plain", "Thank you for contacting ".$site_name."! We will be in contact soon!");
-    $mail = new SendGrid\Mail($from, $subject, $to, $content);
-    $apiKey = getenv('SENDGRID_API_KEY');
-    $sg = new \SendGrid($apiKey);
-    $response = $sg->client->mail()->send()->post($mail);
-    echo $response->statusCode();
-    echo $response->body();
-    print_r($response->headers());
-
-    //echo $site_name."<br />";
-    //echo $setting['email_address']."<br />";
-    //echo $first_name." ".$last_name."<br />";
-    //echo $email_address."<br />";
-    //echo "statusCode is: ".$response->statusCode()."<br />";
-    //echo "headers are: ";
-    //print_r($response->headers());
-    //echo "<br />";
-    //echo "body is: ".$response->body()."<br />";
-
-    /*
-    $from = new SendGrid\Email($site_name, $setting['email_address']);
-    $subject = "New contact for ".$site_name."!";
-    $to = new SendGrid\Email($site_name, $setting['email_address']);
-    $content = new SendGrid\Content("text/plain", "New contact for ".$site_name."!");
-    $mail = new SendGrid\Mail($from, $subject, $to, $content);
-    $apiKey = getenv('SENDGRID_API_KEY');
-    $sg = new \SendGrid($apiKey);
-    $response = $sg->client->mail()->send()->post($mail);
+    $email = array();
+    $email['api_key'] = $sendgrid_api_key;
+    $email['from_email_address'] = $setting['email_address'];
+    $email['from_name'] = $site_name;
+    $email['to_email_address'] = $email_address;
+    $email['to_name'] = $first_name.' '.$last_name;
+    $email['body'] = "Thank you for contacting ".$site_name."!";
+    send_email($email);
     
-    //echo $site_name."<br />";
-    //echo $setting['email_address']."<br />";
-    //echo $first_name." ".$last_name."<br />";
-    //echo $email_address."<br />";
-    //echo "statusCode is: ".$response->statusCode()."<br />";
-    //echo "headers are: ";
-    //print_r($response->headers());
-    //echo "<br />";
-    //echo "body is: ".$response->body()."<br />";
-    */
-    
-    //header("Location: success.php");
+    header("Location: success.php");
 ?>
