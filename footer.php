@@ -1,16 +1,18 @@
 <div class="container">
-    <div class="header columns is-gapless">
-        <div class="column">
+    <div class="header columns is-mobile is-gapless is-multiline">
+        <div class="column is-full-mobile">
             <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/">
                 <img class="logo" src="<?php echo $setting['logo']; ?>" />
             </a>
         </div>
-        <div class="links column is-8">
-            <a class="navigation_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>">HOME</a> &nbsp;&nbsp;&nbsp;
-            <a class="navigation_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/">BLOG</a> &nbsp;&nbsp;&nbsp;
-            <!--<a class="navigation_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/coding/">CODING</a> &nbsp;&nbsp;&nbsp;-->
-            <a class="navigation_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/">BEATS</a> &nbsp;&nbsp;&nbsp;
-            <a class="navigation_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/contact/">CONTACT</a> &nbsp;&nbsp;&nbsp;
+        <div class="links column is-one-third-desktop is-one-third-tablet is-full-mobile">
+            <a class="navigation_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>">HOME</a>&nbsp;&nbsp;&nbsp;
+            <a class="navigation_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/">BLOG</a>&nbsp;&nbsp;&nbsp;
+            <!--<a class="navigation_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/coding/">CODING</a>&nbsp;&nbsp;&nbsp;-->
+            <a class="navigation_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/">BEATS</a>&nbsp;&nbsp;&nbsp;
+            <a class="navigation_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/contact/">CONTACT</a>
+        </div>
+        <div class="links column is-one-third-desktop is-one-third-tablet is-full-mobile">
             <a class="social_link" href=""><i class="fab fa-facebook"></i></a> &nbsp;&nbsp;&nbsp;
             <a class="social_link" href=""><i class="fab fa-instagram"></i></a> &nbsp;&nbsp;&nbsp;
             <a class="social_link" href=""><i class="fab fa-twitter"></i></a>

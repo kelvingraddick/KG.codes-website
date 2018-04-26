@@ -31,7 +31,7 @@
         <div class="container">
             <div class="columns">
                 <div class="column">
-                    <form id="contact_form" method="post" action="submit.php">
+                    <form id="contact_form" class="contact_form" method="post" action="submit.php">
                         <div class="contact_label">Message</div>
                         <textarea class="contact_textarea" name="message"></textarea>
                         <div class="contact_label">First Name*</div>
