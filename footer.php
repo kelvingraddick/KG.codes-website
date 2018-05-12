@@ -13,9 +13,9 @@
             <a class="navigation_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/contact/">CONTACT</a>
         </div>
         <div class="links column is-one-third-desktop is-one-third-tablet is-full-mobile">
-            <a class="social_link" href=""><i class="fab fa-facebook"></i></a> &nbsp;&nbsp;&nbsp;
-            <a class="social_link" href=""><i class="fab fa-instagram"></i></a> &nbsp;&nbsp;&nbsp;
-            <a class="social_link" href=""><i class="fab fa-twitter"></i></a>
+            <a class="social_link" target="_blank" href=""><i class="fab fa-facebook"></i></a> &nbsp;&nbsp;&nbsp;
+            <a class="social_link" target="_blank" href=""><i class="fab fa-instagram"></i></a> &nbsp;&nbsp;&nbsp;
+            <a class="social_link" target="_blank" href=""><i class="fab fa-twitter"></i></a>
         </div>
     </div>
 </div>
