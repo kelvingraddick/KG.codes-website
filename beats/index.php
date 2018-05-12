@@ -24,12 +24,11 @@
         <?php include $_SERVER['DOCUMENT_ROOT'].'/header.php'; ?>
         <div class="about">
             <div class="container">
-                Hi. I am KG The Maker.<br />
-                An app/website programmer, beat maker, and blogger.<br />
-                LEASING RIGHTS (lease button)<br />
-                • beat as mixed stereo mp3 / can be used for one project / beat can still be sold here <br />
-                EXCLUSIVE RIGHTS (buy button)<br />
-                • beat as mixed stereo mp3 / unlimited use / beat can no longer be sold here
+                Hi. I am KG The Maker. Beat maker.<br /><br />
+                LEASING RIGHTS (lease buttons)<br />
+                • beat as mixed stereo MP3 / unlimited use for 1 year<br />
+                EXCLUSIVE RIGHTS (exclusive buttons)<br />
+                • beat as mixed stereo MP3 / track-out stems / unlimited use forever
             </div>
         </div>
         <div class="container">
