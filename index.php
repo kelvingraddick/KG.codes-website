@@ -53,6 +53,7 @@
             </div>
         </div>
         <?php include $_SERVER['DOCUMENT_ROOT'].'/footer.php'; ?>
-		<?php include $_SERVER['DOCUMENT_ROOT'].'/js/main.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'].'/js/main.php'; ?>
+        <script src="https://airbit.com/js/embeds/html5/gatracking.js?gatracking=UA-64813359-1"></script>
 	</body>
 </html>
