@@ -25,10 +25,16 @@
         <div class="about">
             <div class="container">
                 Hi. I am KG The Maker. Beat maker.<br /><br />
-                LEASING RIGHTS (lease buttons)<br />
-                • beat as mixed stereo MP3 / unlimited use for 1 year<br />
-                EXCLUSIVE RIGHTS (exclusive buttons)<br />
-                • beat as mixed stereo MP3 / track-out stems / unlimited use forever
+                <div class="columns is-gapless">
+                    <div class="column">
+                        LEASING RIGHTS (lease buttons)<br />
+                        • beat as mixed stereo MP3 / unlimited use for 1 year
+                    </div>
+                    <div class="column">
+                        EXCLUSIVE RIGHTS (exclusive buttons)<br />
+                        • beat as mixed stereo MP3 / track-out stems / unlimited use forever
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container">
@@ -37,6 +43,11 @@
                     <div class="title">BEATS</div>
                     <iframe id="mfs_html5" src="https://airbit.com/widgets/html5/?uid=1593&config=464601" class="beat_store" height="700" frameborder="0" scrolling="no"></iframe>
                 </div>
+            </div>
+        </div>
+        <div class="columns is-centered">
+            <div class="column is-narrow">
+                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/trust-seals.png" style="height: 150px;" />
             </div>
         </div>
         <?php include $_SERVER['DOCUMENT_ROOT'].'/footer.php'; ?>
