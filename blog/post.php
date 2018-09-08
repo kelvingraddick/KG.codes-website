@@ -25,6 +25,7 @@
         <meta property="fb:app_id" content="361862767338317" />
         <meta property="og:description" content="<?php echo clean_quotes($post['description']); ?>" />
         <meta property="og:image" content="<?php echo $post['main_image_url']; ?>" />
+        <meta property="og:image:alt" content="<?php echo $post['title']; ?>" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:title" content="<?php echo clean_quotes($post['title']); ?>" />
         <meta property="og:url" content="<?php echo "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" />

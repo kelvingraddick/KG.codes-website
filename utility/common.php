@@ -33,7 +33,7 @@
                     <meta name="keywords" content="{keywords}">
                     <meta name="author" content="{title}">
                     <meta name="robots" content="index, follow">
-                    <meta property="fb:app_id" content="[FB_APP_ID]" />
+                    <meta property="fb:app_id" content="361862767338317" />
                     <meta property="og:description" content="{description}" />
                     <meta property="og:image" content="{logo}" />
                     <meta property="og:title" content="{title}" />
@@ -51,7 +51,7 @@ EOF;
         $metatags = str_replace("{title}", $seo['title'], $metatags);
         $metatags = str_replace("{description}", $seo['description'], $metatags); 
         $metatags = str_replace("{keywords}", $seo['keywords'], $metatags);
-        $metatags = str_replace("{logo}", $setting['logo'], $metatags);
+        $metatags = str_replace("{logo}", "https://www.kgthemaker.com/images/background-yellow.png", $metatags);
         $metatags = str_replace("{url}", "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], $metatags);
         $metatags = str_replace("{twitter}", $setting['twitter_link'], $metatags);
         return $metatags;
