@@ -2,6 +2,7 @@
 <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 <script src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/js/jquery.timeago.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55fc175bc50d68dc"></script>
 <script src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/js/main.js"></script>
 <script>
     $(document).ready(function() { });
