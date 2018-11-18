@@ -251,6 +251,34 @@ h3 {
 
 
 
+.beat_title {
+    font-size: 25px;
+}
+
+.beat_title h1 {
+    margin: 0;
+}
+
+.beat_social_icons {
+	position: relative;
+	bottom: 2px;
+	text-align: right; 
+	vertical-align: top; 
+	white-space: nowrap;
+}
+
+.beat_social_icon {
+	cursor: pointer;
+}
+
+.beat_subtitle {
+	font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+
+
 .contact_form {
     margin-left: 15px;
     margin-right: 15px;
