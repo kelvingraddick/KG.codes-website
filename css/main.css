@@ -1,387 +1,326 @@
+@font-face { font-family: 'MuseoSans100'; src: url('../fonts/MuseoSans100.otf'); }
+@font-face { font-family: 'MuseoSans300'; src: url('../fonts/MuseoSans300.otf'); }
+@font-face { font-family: 'MuseoSans500'; src: url('../fonts/MuseoSans500.otf'); }
+@font-face { font-family: 'MuseoSans900'; src: url('../fonts/MuseoSans900.otf'); }
+
 html, body {
     height: 100%;
     max-width: 100%;
-    overflow-x: hidden;
-
-    color: #3E3E3F;
+    background-color: #fafafa;
+    font-family: 'MuseoSans300', Fallback, sans-serif;
+    color: #262626;
 }
 
 a {
-    color: #3E3E3F;
+    font-family: 'MuseoSans500', Fallback, sans-serif;
+    color: #4a4a4a;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: initial;
-    margin: initial;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    padding: initial;
-}
-
-h3 {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 1.1;
-}
-
-.full_height {
-    height: 100%;
-}
-
-.background {
-    position: fixed;
-    top: 0; bottom: 0; left: 0; right: 0;
-    z-index: -1;
-    background-color: #eed67a;
+    font-family: 'MuseoSans900', Fallback, sans-serif;
+    color: #4a4a4a;
 }
 
 
 
-.header {
-    height: auto;
-    padding-bottom: 20px;
+.sidebar_left, .sidebar_right {
+    padding: 35px 45px 35px;
+    background-color: #fafafa;
 }
 
-.header .logo {
-    width: 46%;
-    height: auto;
-    margin-left: 27%;
+.sidebar_header {
+    height: 80px;
 }
 
-.header .links {
-    height: 30px;
-    line-height: 28px;
-    letter-spacing: 2px;
-    white-space: nowrap;
-    text-align: center;
-    color: #3E3E3F;
-}
-
-.header .links a {
-    vertical-align: middle;
-}
-
-.header .navigation_link {
-    font-size: 14px;
-}
-
-.header .social_link {
-    font-size: 20px;
-}
-
-
-
-.about {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-top: 2px solid rgba(183, 150, 24, 0.1);
-    border-bottom: 2px solid rgba(183, 150, 24, 0.1);
-}
-
-.about .container {
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.title {
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-
-
-.partial_post {
-	width: 100%;
-	margin-bottom: 30px;
-	background-color: rgba(0,0,0,.05);
-    border-radius: 2px;
-}
-
-.partial_post_banner {
-	height: 420px;
-	position: relative;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
+.sidebar_header_icon {
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('../images/kg-the-maker-logo-portrait.png');
     cursor: pointer;
 }
 
-.partial_post_header {
-	width: 100%;
-	position: absolute;
-	bottom: 0px;
-    padding: 15px;
-    letter-spacing: 0.1em;
-	background-color: rgba(238, 214, 122, .7);
+.sidebar_header_logo {
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
-.partial_post_title, .partial_post_title h1 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 0px;
-    margin-bottom: 0px;
+.sidebar_footer {
+    margin-top: 25px;
 }
 
-.partial_post_subtitle {
-	font-size: 14px;
+.sidebar_footer_title {
+    font-size: 36px;
+    line-height: 42px;
 }
 
-.partial_post_author_image {
-	height: 30px;
-	width: 30px;
-	float: left;
-	margin-right: 15px;
-	border-radius: 30px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-}
-
-.partial_post_social_icons {
-	position: relative;
-	bottom: 2px;
-	text-align: right; 
-	vertical-align: top; 
-	white-space: nowrap;
-}
-
-.partial_post_social_icon {
-	cursor: pointer;
-}
-
-.partial_post_image {
-	max-height: 150px;
-	float: left;
-	margin-bottom: 10px;
-	margin-right: 20px;
-	border-radius: 3px;
-}
-
-
-
-.full_post {
-	width: 100%;
-	margin-bottom: 40px;
-	background-color: #f9f9fa;
-	border-radius: 2px;
-}
-
-.full_post_banner {
-	height: 420px;
-	position: relative;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-}
-
-.full_post_header {
-	width: 100%;
-	position: absolute;
-	bottom: 0px;
-	padding: 15px;
-	letter-spacing: 0.1em;
-	background-color: rgba(255, 255, 255, .7);
-}
-
-.full_post_title, .full_post_title h1 {
-	font-size: 25px;
-    font-weight: 600;
-    margin-top: 0px;
-	margin-bottom: 0px;
-}
-
-.full_post_subtitle {
-	font-size: 14px;
-	font-weight: 300;
-}
-
-.full_post_author_image {
-	height: 40px;
-	width: 40px;
-	float: left;
-	margin-right: 15px;
-	border-radius: 40px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-}
-
-.full_post_social_icons {
-	position: relative;
-	bottom: 2px;
-	text-align: right; 
-	vertical-align: top; 
-	white-space: nowrap;
-}
-
-.full_post_social_icon {
-	cursor: pointer;
-}
-
-.full_post_content {
-	padding: 15px;
-	font-size: 16px;
-	font-weight: 400;
+.sidebar_footer_description {
+    margin-top: 25px;
+    font-size: 16px;
     line-height: 26px;
-	overflow-y: hidden;
 }
 
-.full_post_image {
-	max-height: 150px;
-	float: left;
-	margin-bottom: 10px;
-	margin-right: 20px;
-	border-radius: 3px;
+.sidebar_footer_navigation_buttons {
+    margin-top: 25px;
 }
 
-.full_post_footer {
-	padding-top: 15px;
-	border-top: 1px dashed #515151;
+.sidebar_footer_navigation_button:hover {
+    text-decoration: underline;
 }
 
-.full_post_footer_button {
-	float: right;
-	margin-left: 10px;
-	line-height: 40px;
+.sidebar_footer_social_buttons {
+    margin-top: 25px;
+    font-size: 26px;
 }
 
-
-
-.beat_title {
-    font-size: 25px;
+.sidebar_footer_social_button {
+    color: #A2A2A2;
 }
 
-.beat_title h1 {
-    margin: 0;
+.fb-messengermessageus {
+    margin-top: 25px;
 }
 
-.beat_social_icons {
-	position: relative;
-	bottom: 2px;
-	text-align: right; 
-	vertical-align: top; 
-	white-space: nowrap;
+.page_left, .page_right {
+    
 }
 
-.beat_social_icon {
-	cursor: pointer;
-}
-
-.beat_subtitle {
-	font-size: 14px;
-    font-weight: 300;
-    margin-bottom: 10px;
-}
-
-
-
-.contact_form {
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.contact_label {
-    padding-bottom: 15px;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.contact_textbox {
+.page_block {
     width: 100%;
-    padding: 5px;
-    margin-bottom: 15px;
-    font-size: 14px;
-    border: 2px solid rgba(183, 150, 24, 0.5);
-    background: none;
+    padding: 35px 45px 35px;
 }
 
-.contact_textarea {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 15px;
-    font-size: 14px;
-    border: 2px solid rgba(183, 150, 24, 0.5);
-    background: none;
-}
-
-.contact_radio {
-    font-size: 12px;
-}
-
-.contact_button {
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 10px;
-    border: 2px solid rgba(183, 150, 24, 0.5);
-    background: none;
+.page_block_title {
+    font-size: 22px;
+    line-height: 28px;
     cursor: pointer;
 }
 
+.page_block_title:hover {
+    text-decoration: underline;
+}
 
+.page_block_image {
+    margin-top: 25px;
+    height: 250px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.page_block_widget {
+    margin-top: 25px;
+}
+
+.page_block_content {
+    vertical-align: top;
+}
+
+.page_block_description {
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.page_block_time {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'MuseoSans500', Fallback, sans-serif;
+}
+
+.page_block_button {
+    float: right;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'MuseoSans500', Fallback, sans-serif;
+    color: #4a4a4a;
+    cursor: pointer;
+}
+
+.page_block_button:hover {
+    text-decoration: underline;
+}
+
+.next_button {
+    padding: 25px 55px;
+    text-align: right;
+}
+
+.post {
+
+}
+
+.post_banner_image {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.post_content {
+    padding: 45px;
+}
+
+.post_title {
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.post_sub_title {
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.post_body {
+    padding-top: 35px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.post_body h3 {
+    margin: 26px 0px;
+    font-size: 22px;
+    line-height: 20px;
+}
+
+.fb-comments {
+    width: 100%;
+    padding-top: 35px;
+}
 
 .beat_store {
     width: 100%;
     border: 2px solid rgba(183, 150, 24, 0.1);
 }
 
-
-
-.container {
-    width: 100%;
+.contact_form {
+    
 }
 
+.contact_label {
+    margin-top: 20px;
+}
 
+.contact_textarea {
+    width: 100%;
+    margin-top: 5px;
+    border: 2px solid #4a4a4a;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: 'MuseoSans300', Fallback, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    color: #262626;
+}
+
+.contact_textbox {
+    width: 100%;
+    margin-top: 5px;
+    border: 2px solid #4a4a4a;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: 'MuseoSans300', Fallback, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    color: #262626;
+}
+
+.contact_radio {
+    margin-top: 5px;
+    font-family: 'MuseoSans300', Fallback, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    color: #262626;
+}
+
+.contact_button {
+    width: 200px;
+    border: 2px solid #4a4a4a;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: 'MuseoSans300', Fallback, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    color: #262626;
+    cursor: pointer;
+}
 
 @media (min-width: 768px) {
-    .header {
-        height: 60px;
-        padding: 0;
-    }
 
-    .header .logo {
-        width: auto;
-        height: 100%;
-        padding: 5px;
-        margin: 0;
-    }
-    
-    .header .links {
-        height: 60px;
-        line-height: 56px;
-        text-align: right;
-    }
-
-    .about .container {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .title {
-        margin: 0;
-    }
-
-    .contact_form {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .container {
-        width: 768px;
-        margin-left: auto;
-        margin-right: auto;
-	}
 }
 
 @media (min-width: 992px) {
-    .container {
-        width: 992px;
-	}
+    .sidebar_left, .sidebar_right {
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        z-index: 0;
+        width: 40%;
+        height: 100%;
+        padding: 75px 85px 50px;
+    }
+
+    .sidebar_left {
+        left: 0px;
+    }
+
+    .sidebar_right {
+        right: 0px;
+    }
+
+    .sidebar_footer {
+        position: absolute;
+        bottom: 85px;
+        width: 70%;
+    }
+    
+    .page_left, .page_right {
+        position: static;
+        width: 60%;
+        z-index: 1;
+    }
+
+    .page_left {
+        margin-right: 40%;
+    }
+
+    .page_right {
+        margin-left: 40%;
+    }
+
+    .page_block {
+        padding: 65px;
+    }
+
+    .page_block_image {
+        display: inline-block;
+        height: 250px;
+        width: 47%;
+    }
+
+    .page_block_widget {
+        display: inline-block;
+        width: 47%;
+    }
+    
+    .page_block_content {
+        display: inline-block;
+        margin-left: 5%;
+        width: 47%;
+    }
+
+    .post_content {
+        padding: 55px;
+    }
 }

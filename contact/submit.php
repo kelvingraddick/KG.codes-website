@@ -4,7 +4,7 @@
 	error_reporting(-1);
 	include $_SERVER['DOCUMENT_ROOT'].'/utility/configuration.php';
     include $_SERVER['DOCUMENT_ROOT'].'/utility/common.php';
-    require($_SERVER['DOCUMENT_ROOT'].'/utility/sendgrid/sendgrid-php.php');
+    include $_SERVER['DOCUMENT_ROOT'].'/utility/email.php';
 
     $database_connection = connect_to_database();
     $setting = get_settings($database_connection);
@@ -32,12 +32,33 @@
     }
 
     $email = array();
-    $email['api_key'] = $sendgrid_api_key;
-    $email['from_email_address'] = $setting['email_address'];
-    $email['from_name'] = $site_name;
-    $email['to_email_address'] = $email_address;
-    $email['to_name'] = $first_name.' '.$last_name;
-    $email['body'] = "Thank you for contacting ".$site_name."!";
+    $email['recipient_email_address'] = $email_address;
+    $email['recipient_name'] = $first_name.' '.$last_name;
+    $email['subject'] = "Thank you for contacting ".$site_name."!";
+    $content = '
+        Thank you for contacting '.$site_name.'!<br>
+        I will be in touch soon to follow up on your inquiry!
+        <br><br>
+        In the meantime, feel free to connect with me faster using one of the social buttons below.
+        <br><br>
+        - KG The Maker
+        <br><br>
+    ';
+    $email['body'] = get_email_template($content, $setting);
+    send_email($email);
+
+    $email['recipient_email_address'] = $setting['email_address'];
+    $email['recipient_name'] = $setting['contact_name'];
+    $email['subject'] = $site_name.": You have a new inquiry from ".$first_name." ".$last_name."!";
+    $content =
+        $site_name.': You have a new inquiry from '.$first_name.' '.$last_name.'!<br>
+        Notes: '.$notes.'<br>
+        Email Address: '.$email_address.'<br>
+        Phone Number: '.$phone_number.'<br>
+        Joined Email List?: '.$join_email_list.'<br>
+        <br><br>
+    ';
+    $email['body'] = get_email_template($content, $setting);
     send_email($email);
     
     header("Location: success.php");

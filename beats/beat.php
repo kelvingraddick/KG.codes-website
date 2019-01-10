@@ -4,7 +4,6 @@
 	error_reporting(-1);
 	include $_SERVER['DOCUMENT_ROOT'].'/utility/configuration.php';
     include $_SERVER['DOCUMENT_ROOT'].'/utility/common.php';
-    include $_SERVER['DOCUMENT_ROOT'].'/utility/templates.php';
 	$database_connection = connect_to_database();
     $setting = get_settings($database_connection);
     $seo = get_seo($database_connection, "beats");
@@ -77,61 +76,46 @@
                 }
             }
         </script>
-		<div id="particles" class="background"></div>
-        <?php include $_SERVER['DOCUMENT_ROOT'].'/header.php'; ?>
-        <div class="about">
-            <div class="container">
-                Hi. I am KG The Maker.<br />
-                An app/website programmer, beat maker, and blogger.
-            </div>
-        </div>
-        <div class="container">
-            <div class="columns">
-                <div class="column">
-                    <?php
-                        $beat_url = 'https://'.$_SERVER['SERVER_NAME'].'/beats/'.$beat['slug'];
-                    ?>
-                    <div class="beat_title">
-                        <table style="width:100%;">
-                            <tr>
-                                <td>
-                                    <h1><?php echo $beat['title']; ?></h1>
-                                </td>
-                                <td class="beat_social_icons">
-                                    <i class="fab fa-facebook beat_social_icon" onclick="shareUrlToFacebook(this, '<?php echo $beat_url; ?>');"></i>
-                                    <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($beat['title']); ?>&url=<?php echo $beat_url; ?>&via=kgthemaker" target="_blank"><i class="fab fa-twitter beat_social_icon"></i></a>
-                                    <a href="https://www.pinterest.com/pin/create/button/?url=<?php echo $beat_url; ?>&media=<?php echo $beat['tall_image_url']; ?>&description=<?php echo urlencode($beat['title']); ?>" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
-                                        <i class="fab fa-pinterest beat_social_icon"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
+        <div class="page_left">
+            <?php
+                $beat_url = 'https://'.$_SERVER['SERVER_NAME'].'/beats/'.$beat['slug'];
+                $colors = array('eed67a', 'ee7a92', '7a92ee', '7accee');
+                shuffle($colors);
+            ?>
+            <div class="post">
+                <div class="post_banner_image" style="background-image:url('<?php echo $beat['main_image_url']; ?>');" title="<?php echo $beat['title']; ?>"></div>
+                <div class="post_content" style="border-right: 5px solid #<?php echo array_pop($colors); ?>;">
+                    <div class="post_title">
+                        <h1><?php echo $beat['title']; ?></h1>
                     </div>
-                    <div class="beat_subtitle">
-                        <?php echo $beat['seller']; ?> &middot;
-                        <time class="timeago" datetime="<?php echo date(DATE_ISO8601, strtotime($beat['created_time'])); ?>"></time>
+                    <div class="post_sub_title">
+                        $<?php echo $beat['sale_price']; ?> &middot;
+                        <i class="fab fa-facebook full_post_social_icon" onclick="shareUrlToFacebook(this, '<?php echo $beat_url; ?>');"></i> &nbsp;
+                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($beat['title']); ?>&url=<?php echo $beat_url; ?>&via=kgthemaker" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
+                        <a href="https://www.pinterest.com/pin/create/button/?url=<?php echo $beat_url; ?>&media=<?php echo $beat['tall_image_url']; ?>&description=<?php echo urlencode($beat['title']); ?>" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
+                            <i class="fab fa-pinterest full_post_social_icon"></i>
+                        </a>
                     </div>
-                    <iframe src="https://airbit.com/widgets/solo/?b=<?php echo $beat['code']; ?>" height="160" frameborder="0" style="width: 100%;"></iframe>
-                    <div class="full_post">
-                        <div class="full_post_content">
-                            <?php echo $beat['long_description']; ?>
-                            <br />
-                            <div class="full_post_footer">
-                                <div class="full_post_author_image" style="background-image:url('<?php echo $beat['main_image_url']; ?>');"></div>
-                                <div class="full_post_subtitle" style="float:left;">by<br /><?php echo $beat['seller']; ?></div>
-                                <a href="https://www.pinterest.com/pin/create/button/?url=<?php echo $beat_url; ?>&media=<?php echo $beat['tall_image_url']; ?>&description=<?php echo urlencode($beat['title']); ?>" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
-                                    <i class="fab fa-pinterest full_post_footer_button"></i>
-                                </a>
-                                <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($beat['title']); ?>&url=<?php echo $beat_url; ?>&via=kgthemaker" target="_blank"><i class="fab fa-twitter full_post_footer_button"></i></a>
-                                <i class="fab fa-facebook full_post_footer_button" onclick="shareUrlToFacebook(this, '<?php echo $beat_url; ?>');"></i>
-                            </div>
-                        </div>
-                        <div class="fb-comments" data-href="<?php echo $beat_url; ?>" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
+                    <div class="post_body">
+                        <iframe src="https://airbit.com/widgets/solo/?b=<?php echo $beat['code']; ?>" height="160" frameborder="0" style="width: 100%;"></iframe>
+                        <br /><br />
+                        <?php echo $beat['long_description']; ?>
                     </div>
+                    <div class="post_sub_title">
+                        Want to share this? &nbsp;&nbsp;
+                        <i class="fab fa-facebook full_post_social_icon" onclick="shareUrlToFacebook(this, '<?php echo $beat_url; ?>');"></i> &nbsp;
+                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($beat['title']); ?>&url=<?php echo $beat_url; ?>&via=kgthemaker" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
+                        <a href="https://www.pinterest.com/pin/create/button/?url=<?php echo $beat_url; ?>&media=<?php echo $beat['tall_image_url']; ?>&description=<?php echo urlencode($beat['title']); ?>" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
+                            <i class="fab fa-pinterest full_post_social_icon"></i>
+                        </a>
+                    </div>
+                    <div class="fb-comments" data-href="<?php echo $beat_url; ?>" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
                 </div>
             </div>
         </div>
-        <?php include $_SERVER['DOCUMENT_ROOT'].'/footer.php'; ?>
+        <div class="sidebar_right">
+            <?php include $_SERVER['DOCUMENT_ROOT'].'/header.php'; ?>
+        </div>
 		<?php include $_SERVER['DOCUMENT_ROOT'].'/js/main.php'; ?>
 	</body>
 </html>

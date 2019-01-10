@@ -1,9 +1,10 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '361862767338317',
-      xfbml      : true,
-      version    : 'v2.12'
+      appId            : '361862767338317',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v3.2'
     });
     FB.AppEvents.logPageView();
   };

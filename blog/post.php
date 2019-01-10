@@ -4,7 +4,6 @@
 	error_reporting(-1);
 	include $_SERVER['DOCUMENT_ROOT'].'/utility/configuration.php';
     include $_SERVER['DOCUMENT_ROOT'].'/utility/common.php';
-    include $_SERVER['DOCUMENT_ROOT'].'/utility/templates.php';
 	$database_connection = connect_to_database();
     $setting = get_settings($database_connection);
     $seo = get_seo($database_connection, "blog");
@@ -56,64 +55,45 @@
                 "articleBody": "<?php echo clean_quotes($post['content']); ?>"
             }
         </script>
-		<div id="particles" class="background"></div>
-        <?php include $_SERVER['DOCUMENT_ROOT'].'/header.php'; ?>
-        <div class="about">
-            <div class="container">
-                Hi. I am KG The Maker.<br />
-                An app/website programmer, beat maker, and blogger.
-            </div>
-        </div>
-        <div class="container">
-            <div class="columns">
-                <div class="column">
-                    <?php
-                        $post_url = 'https://'.$_SERVER['SERVER_NAME'].'/blog/'.$post['slug'];
-                    ?>
-                    <div class="full_post">
-                        <div class="full_post_banner" style="background-image:url('<?php echo $post['main_image_url']; ?>');" title="<?php echo $post['title']; ?>">
-                            <div class="full_post_header">
-                                <div class="full_post_title">
-                                    <table style="width:100%;">
-                                        <tr>
-                                            <td>
-                                                <h1><?php echo $post['title']; ?></h1>
-                                            </td>
-                                            <td class="full_post_social_icons">
-                                                <i class="fab fa-facebook full_post_social_icon" onclick="shareUrlToFacebook(this, '<?php echo $post_url; ?>');"></i>
-                                                <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($post['title']); ?>&url=<?php echo $post_url; ?>&via=kgthemaker" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a>
-                                                <a href="https://www.pinterest.com/pin/create/button/?url=<?php echo $post_url; ?>&media=<?php echo $post['tall_image_url']; ?>&description=<?php echo urlencode($post['title']); ?>" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
-                                                    <i class="fab fa-pinterest full_post_social_icon"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="full_post_subtitle">
-                                    <?php echo $post['author']; ?> &middot;
-                                    <time class="timeago" datetime="<?php echo date(DATE_ISO8601, strtotime($post['created_time'])); ?>"></time>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="full_post_content">
-                            <?php echo $post['content']; ?>
-                            <br />
-                            <div class="full_post_footer">
-                                <div class="full_post_author_image" style="background-image:url('<?php echo $post['main_image_url']; ?>');"></div>
-                                <div class="full_post_subtitle" style="float:left;">by<br /><?php echo $post['author']; ?></div>
-                                <a href="https://www.pinterest.com/pin/create/button/?url=<?php echo $post_url; ?>&media=<?php echo $post['tall_image_url']; ?>&description=<?php echo urlencode($post['title']); ?>" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
-                                    <i class="fab fa-pinterest full_post_footer_button"></i>
-                                </a>
-                                <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($post['title']); ?>&url=<?php echo $post_url; ?>&via=kgthemaker" target="_blank"><i class="fab fa-twitter full_post_footer_button"></i></a>
-                                <i class="fab fa-facebook full_post_footer_button" onclick="shareUrlToFacebook(this, '<?php echo $post_url; ?>');"></i>
-                            </div>
-                        </div>
-                        <div class="fb-comments" data-href="<?php echo $post_url; ?>" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
+        <div class="page_left">
+            <?php
+                $post_url = 'https://'.$_SERVER['SERVER_NAME'].'/blog/'.$post['slug'];
+                $colors = array('eed67a', 'ee7a92', '7a92ee', '7accee');
+                shuffle($colors);
+            ?>
+            <div class="post">
+                <div class="post_banner_image" style="background-image:url('<?php echo $post['main_image_url']; ?>');" title="<?php echo $post['title']; ?>"></div>
+                <div class="post_content" style="border-right: 5px solid #<?php echo array_pop($colors); ?>;">
+                    <div class="post_title">
+                        <h1><?php echo $post['title']; ?></h1>
                     </div>
+                    <div class="post_sub_title">
+                        <?php echo $post['author']; ?> &middot;
+                        <?php echo get_time_to_read($post['content']); ?> &middot;&nbsp;
+                        <i class="fab fa-facebook full_post_social_icon" onclick="shareUrlToFacebook(this, '<?php echo $post_url; ?>');"></i> &nbsp;
+                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($post['title']); ?>&url=<?php echo $post_url; ?>&via=kgthemaker" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
+                        <a href="https://www.pinterest.com/pin/create/button/?url=<?php echo $post_url; ?>&media=<?php echo $post['tall_image_url']; ?>&description=<?php echo urlencode($post['title']); ?>" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
+                            <i class="fab fa-pinterest full_post_social_icon"></i>
+                        </a>
+                    </div>
+                    <div class="post_body">
+                        <?php echo $post['content']; ?>
+                    </div>
+                    <div class="post_sub_title">
+                        Want to share this? &nbsp;&nbsp;
+                        <i class="fab fa-facebook full_post_social_icon" onclick="shareUrlToFacebook(this, '<?php echo $post_url; ?>');"></i> &nbsp;
+                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($post['title']); ?>&url=<?php echo $post_url; ?>&via=kgthemaker" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
+                        <a href="https://www.pinterest.com/pin/create/button/?url=<?php echo $post_url; ?>&media=<?php echo $post['tall_image_url']; ?>&description=<?php echo urlencode($post['title']); ?>" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
+                            <i class="fab fa-pinterest full_post_social_icon"></i>
+                        </a>
+                    </div>
+                    <div class="fb-comments" data-href="<?php echo $post_url; ?>" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
                 </div>
             </div>
         </div>
-        <?php include $_SERVER['DOCUMENT_ROOT'].'/footer.php'; ?>
+        <div class="sidebar_right">
+            <?php include $_SERVER['DOCUMENT_ROOT'].'/header.php'; ?>
+        </div>
 		<?php include $_SERVER['DOCUMENT_ROOT'].'/js/main.php'; ?>
 	</body>
 </html>

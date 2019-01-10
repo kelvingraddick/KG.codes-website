@@ -67,47 +67,11 @@ EOF;
 		return is_array($value) ? $value[0] : "";
     }
 
-    function send_email($parameters) {
-        $url = "https://api.sendgrid.com/v3/mail/send";
-        $content = '{
-            "personalizations": [
-                {
-                    "to": [
-                        {
-                            "email": "'.$parameters['to_email_address'].'",
-                            "name": "'.$parameters['to_name'].'"
-                        }
-                    ],
-                    "subject": "Thank you for contacting '.$parameters['from_name'].'!"
-                }
-            ],
-            "from": {
-                "email": "'.$parameters['from_email_address'].'",
-                "name": "'.$parameters['from_name'].'"
-            },
-            "content": [
-                {
-                    "type": "text/plain",
-                    "value": "'.$parameters['body'].'"
-                }
-            ]
-        }';
-        $curl = curl_init($url);
-        curl_setopt($curl, CURLOPT_HEADER, false);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, array("Content-type: application/json", "Authorization: Bearer ".$parameters['api_key']));
-        curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $content);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-        $json_response = curl_exec($curl);
-        $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-        echo $content."<br />";
-        echo $parameters['api_key']."<br />";
-        if ( $status != 202 ) { die("Error: call to URL $url failed with status $status, response $json_response, curl_error " . curl_error($curl) . ", curl_errno " . curl_errno($curl));  }
-        curl_close($curl);
-        $response = json_decode($json_response, true);
-        echo "success";
-        return $response;
+    function get_time_to_read($html) {
+        $word_count = str_word_count(strip_tags($html));
+        $minutes = floor($word_count / 200);
+        $seconds = floor($word_count % 200 / (200 / 60));
+        return ($minutes == 0 ? $seconds." second" : $minutes." minute")." read";
     }
     
 ?>

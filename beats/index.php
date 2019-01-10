@@ -4,7 +4,6 @@
 	error_reporting(-1);
 	include $_SERVER['DOCUMENT_ROOT'].'/utility/configuration.php';
     include $_SERVER['DOCUMENT_ROOT'].'/utility/common.php';
-    include $_SERVER['DOCUMENT_ROOT'].'/utility/templates.php';
 	$database_connection = connect_to_database();
     $setting = get_settings($database_connection);
     $seo = get_seo($database_connection, "beats");
@@ -37,37 +36,34 @@
         <!-- End Facebook Pixel Code -->
 	</head>
 	<body>
-		<div id="particles" class="background"></div>
-        <?php include $_SERVER['DOCUMENT_ROOT'].'/header.php'; ?>
-        <div class="about">
-            <div class="container">
-                Hi. I am KG The Maker. Beat maker.<br /><br />
-                <div class="columns is-gapless">
-                    <div class="column">
-                        LEASING RIGHTS (lease buttons)<br />
-                        • beat as mixed stereo MP3 / unlimited use for 1 year
-                    </div>
-                    <div class="column">
-                        EXCLUSIVE RIGHTS (exclusive buttons)<br />
-                        • beat as mixed stereo MP3 / track-out stems / unlimited use forever
-                    </div>
+        <div class="page_left">
+            <div class="page_block" style="background-color: #eed67a;">
+                <div class="page_block_title">
+                    <h1>KG THE MAKER BEATS.</h1>
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="columns">
-                <div class="column">
-                    <div class="title">BEATS</div>
-                    <iframe id="mfs_html5" src="https://airbit.com/widgets/html5/?uid=1593&config=464601" class="beat_store" height="700" frameborder="0" scrolling="no"></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="columns is-centered">
-            <div class="column is-narrow">
+                Hi. I am KG The Maker. Beat maker. Listen to and download hip-hop / pop / R&B beats produced by me and inspired by the greats.
+                <br />
+                Download instantly and/or contact me directly for collaboration.
+                <br /><br />
+                <iframe id="mfs_html5" src="https://airbit.com/widgets/html5/?uid=1593&config=464601" class="beat_store" height="700" frameborder="0" scrolling="no"></iframe>
+                <br /><br />
+                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-1.jpg" style="max-height: 300px; max-width: 49%; border-radius: 5px;" />
+                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-2.jpg" style="max-height: 300px; max-width: 49%; border-radius: 5px;" />
+                <br /><br />
+                UNLIMITED ('Unlimited' buttons)
+                <br />
+                • instant MP3 download / unlimited use
+                <br /><br />
+                EXCLUSIVE ('Exclusive' buttons)
+                <br />
+                • instant MP3 download / plus track-out stems / unlimited use / beat removed from store
+                <br /><br />
                 <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/trust-seals.png" style="height: 150px;" />
             </div>
         </div>
-        <?php include $_SERVER['DOCUMENT_ROOT'].'/footer.php'; ?>
+        <div class="sidebar_right">
+            <?php include $_SERVER['DOCUMENT_ROOT'].'/header.php'; ?>
+        </div>
         <?php include $_SERVER['DOCUMENT_ROOT'].'/js/main.php'; ?>
         <script src="https://airbit.com/js/embeds/html5/gatracking.js?gatracking=UA-64813359-1"></script>
 	</body>
