@@ -73,5 +73,21 @@ EOF;
         $seconds = floor($word_count % 200 / (200 / 60));
         return ($minutes == 0 ? $seconds." second" : $minutes." minute")." read";
     }
+
+    function get_hex_color($hex, $brightness) {
+        $brightness = max(-255, min(255, $brightness));
+        $hex = str_replace('#', '', $hex);
+        if (strlen($hex) == 3) {
+            $hex = str_repeat(substr($hex,0,1), 2).str_repeat(substr($hex,1,1), 2).str_repeat(substr($hex,2,1), 2);
+        }
+        $color_parts = str_split($hex, 2);
+        $return = '';
+        foreach ($color_parts as $color) {
+            $color   = hexdec($color);
+            $color   = max(0,min(255,$color + $brightness));
+            $return .= str_pad(dechex($color), 2, '0', STR_PAD_LEFT);
+        }
+        return $return;
+    }
     
 ?>

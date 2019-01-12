@@ -21,6 +21,11 @@ h1, h2, h3, h4, h5, h6 {
     color: #4a4a4a;
 }
 
+b {
+    font-family: 'MuseoSans500', Fallback, sans-serif;
+    color: #4a4a4a;
+}
+
 
 
 .sidebar_left, .sidebar_right {
@@ -86,13 +91,21 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 25px;
 }
 
+
+
 .page_left, .page_right {
     
 }
 
+
+
 .page_block {
     width: 100%;
     padding: 35px 45px 35px;
+}
+
+.page_block img {
+    border: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .page_block_title {
@@ -119,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 25px;
 }
 
-.page_block_content {
+.page_block_content_left, .page_block_content_right {
     vertical-align: top;
 }
 
@@ -135,6 +148,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
     line-height: 20px;
     font-family: 'MuseoSans500', Fallback, sans-serif;
+    color: #4a4a4a;
 }
 
 .page_block_button {
@@ -151,10 +165,26 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
 }
 
+.page_block_icon {
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    margin-top: 25px;
+    margin-right: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+}
+
 .next_button {
     padding: 25px 55px;
     text-align: right;
 }
+
+
 
 .post {
 
@@ -199,10 +229,14 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 35px;
 }
 
+
+
 .beat_store {
     width: 100%;
     border: 2px solid rgba(183, 150, 24, 0.1);
 }
+
+
 
 .contact_form {
     
@@ -256,9 +290,13 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
+
+
 @media (min-width: 768px) {
 
 }
+
+
 
 @media (min-width: 992px) {
     .sidebar_left, .sidebar_right {
@@ -312,12 +350,20 @@ h1, h2, h3, h4, h5, h6 {
     .page_block_widget {
         display: inline-block;
         width: 47%;
+        margin-right: 2.5%;
+    }
+
+    .page_block_content_left, .page_block_content_right {
+        display: inline-block;
+        width: 47%;
     }
     
-    .page_block_content {
-        display: inline-block;
-        margin-left: 5%;
-        width: 47%;
+    .page_block_content_left {
+        margin-right: 2.5%;
+    }
+
+    .page_block_content_right {
+        margin-left: 2.5%;
     }
 
     .post_content {

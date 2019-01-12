@@ -41,6 +41,7 @@
                 <div class="page_block_title">
                     <h1>KG THE MAKER BEATS.</h1>
                 </div>
+                <br />
                 Hi. I am KG The Maker. Beat maker. Listen to and download hip-hop / pop / R&B beats produced by me and inspired by the greats.
                 <br />
                 Download instantly and/or contact me directly for collaboration.
