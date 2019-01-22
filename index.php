@@ -35,8 +35,8 @@
                 <div class="page_block_content_right">
                     <div class="page_block_description">
                         Listen to and download hip-hop / pop / R&B beats produced by KG The Maker. Download instantly and/or contact me directly for collaboration.<br /><br />
-                        <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-1.jpg" style="width: 49%; border-radius: 5px;" />
-                        <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-2.jpg" style="width: 49%; border-radius: 5px;" />
+                        <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-1.jpg" alt="KG The Maker music producer" style="width: 49%; border-radius: 5px;" />
+                        <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-2.jpg" alt="KG The Maker music producer" style="width: 49%; border-radius: 5px;" />
                     </div>
                     <div class="page_block_button">
                         <i class="fas fa-external-link-alt"></i>
