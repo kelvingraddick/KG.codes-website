@@ -59,7 +59,7 @@
                 <br />
                 • instant MP3 download / plus track-out stems / unlimited use / beat removed from store
                 <br /><br />
-                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/trust-seals.png" style="height: 150px;" />
+                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/trust-seals.png" alt="trust seals" style="height: 150px;" />
             </div>
         </div>
         <div class="sidebar_right">

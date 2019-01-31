@@ -9,21 +9,21 @@
         </td>
         <td>
             <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/">
-                <img class="sidebar_header_logo" src="<?php echo $setting['logo']; ?>" />
+                <img class="sidebar_header_logo" src="<?php echo $setting['logo']; ?>" alt="KG The Maker" />
             </a>
         </td>
     </tr>
 </table>
 <div class="sidebar_footer">
     <div class="sidebar_footer_title">
-        <h1>
+        <h<?php echo $header_h_tag_number; ?>>
             APP/WEBSITE MAKER.<br />
             BEAT MAKER.<br />
             CONTENT CREATOR.
-        </h1>
+        </h<?php echo $header_h_tag_number; ?>>
     </div>
     <div class="sidebar_footer_description">
-        Hi. I'm Kelvin Graddick also known as KG The Maker. I'm a software developer/programmer, a music producer, and content creator. I'm all about digital creation.
+        <p>Hi. I'm Kelvin Graddick also known as KG The Maker. I'm a software developer/programmer, a music producer, and content creator. I'm all about digital creation.</p>
     </div>
     <div class="sidebar_footer_navigation_buttons">
         <a class="sidebar_footer_navigation_button" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>">HOME</a>&nbsp;&nbsp;&nbsp;

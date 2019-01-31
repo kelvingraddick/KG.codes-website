@@ -1,4 +1,5 @@
 <?php
+    $header_h_tag_number = 2;
 
     function connect_to_database() {
 		$database_connection = mysqli_connect($GLOBALS['database_host'],
