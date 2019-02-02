@@ -48,8 +48,8 @@
                 <br /><br />
                 <iframe id="mfs_html5" src="https://airbit.com/widgets/html5/?uid=1593&config=464601" class="beat_store" height="700" frameborder="0" scrolling="no"></iframe>
                 <br /><br />
-                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-1.jpg" style="max-height: 300px; max-width: 49%; border-radius: 5px;" />
-                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-2.jpg" style="max-height: 300px; max-width: 49%; border-radius: 5px;" />
+                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-1.jpg" alt="KG The Maker music producer" style="max-height: 300px; max-width: 49%; border-radius: 5px;" />
+                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-2.jpg" alt="KG The Maker music producer" style="max-height: 300px; max-width: 49%; border-radius: 5px;" />
                 <br /><br />
                 UNLIMITED ('Unlimited' buttons)
                 <br />
@@ -59,7 +59,7 @@
                 <br />
                 • instant MP3 download / plus track-out stems / unlimited use / beat removed from store
                 <br /><br />
-                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/trust-seals.png" style="height: 150px;" />
+                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/trust-seals.png" alt="trust seals" style="height: 150px;" />
             </div>
         </div>
         <div class="sidebar_right">

@@ -7,6 +7,7 @@
 	$database_connection = connect_to_database();
     $setting = get_settings($database_connection);
     $seo = get_seo($database_connection, "home");
+    $header_h_tag_number = 1;
     $from = isset($_GET['from']) ? $_GET['from'] : 0;
 ?>
 <!DOCTYPE html>
@@ -27,16 +28,16 @@
         <div class="page_right">
             <div class="page_block" style="background-color: #eed67a;" onclick="location.href='https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/';">
                 <div class="page_block_title">
-                    <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/"><h1>BEAT MAKER.</h1></a>
+                    <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/"><h2>BEAT MAKER.</h2></a>
                 </div>
                 <div class="page_block_widget">
                     <iframe id="mfs_html5" src="https://airbit.com/widgets/html5/?uid=1593&config=464605" class="beat_store" height="400" frameborder="0" scrolling="no"></iframe>
                 </div>
                 <div class="page_block_content_right">
                     <div class="page_block_description">
-                        Listen to and download hip-hop / pop / R&B beats produced by KG The Maker. Download instantly and/or contact me directly for collaboration.<br /><br />
-                        <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-1.jpg" style="width: 49%; border-radius: 5px;" />
-                        <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-2.jpg" style="width: 49%; border-radius: 5px;" />
+                        <p>Listen to and download hip-hop / pop / R&B beats produced by KG The Maker. Download instantly and/or contact me directly for collaboration.</p><br />
+                        <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-1.jpg" alt="KG The Maker music producer" style="width: 49%; border-radius: 5px;" />
+                        <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-2.jpg" alt="KG The Maker music producer" style="width: 49%; border-radius: 5px;" />
                     </div>
                     <div class="page_block_button">
                         <i class="fas fa-external-link-alt"></i>
@@ -45,7 +46,7 @@
             </div>
             <div class="page_block" style="background-color: #ee7a92;">
                 <div class="page_block_title">
-                    <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/coding/"><h1>APP/WEBSITE MAKER.</h1></a>
+                    <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/coding/"><h2>APP/WEBSITE MAKER.</h2></a>
                 </div>
                 <div class="page_block_content_left" onclick="location.href='https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/copy-paste-app-snippeta';">
                     <table>
@@ -55,7 +56,7 @@
                             </td>
                             <td>
                                 <div class="page_block_description">
-                                    <b>SNIPPETA IOS APP</b> &middot; Copy, paste, and manage snippets of text! Copy snippet text to your clipboard with a single tap; no highlighting/long-tapping!
+                                    <p><b>SNIPPETA IOS APP</b> &middot; Copy, paste, and manage snippets of text! Copy snippet text to your clipboard with a single tap; no highlighting/long-tapping!</p>
                                 </div>
                             </td>
                         </tr>
@@ -75,7 +76,7 @@
                             </td>
                             <td>
                                 <div class="page_block_description">
-                                    <b>LINKIFY.BIO WEBSITE</b> &middot; Quickly provide multiple links in a social bio or ad through a single link!
+                                    <p><b>LINKIFY.BIO WEBSITE</b> &middot; Quickly provide multiple links in a social bio or ad through a single link!</p>
                                 </div>
                             </td>
                         </tr>
@@ -95,7 +96,7 @@
                             </td>
                             <td>
                                 <div class="page_block_description">
-                                    <b>WAVE LINK, LLC WEBSITE</b> &middot; Creative 3D website developed for software development company Wave Link, LLC.
+                                    <p><b>WAVE LINK, LLC WEBSITE</b> &middot; Creative 3D website developed for software development company Wave Link, LLC.</p>
                                 </div>
                             </td>
                         </tr>
@@ -115,7 +116,7 @@
                             </td>
                             <td>
                                 <div class="page_block_description">
-                                    <b>..MORE ON GITHUB</b> &middot; My personal GitHub page with more of my programming projects and contributions.
+                                    <p><b>..MORE ON GITHUB</b> &middot; My personal GitHub page with more of my programming projects and contributions.</p>
                                 </div>
                             </td>
                         </tr>
@@ -142,12 +143,12 @@
                     echo 
                     '<div class="page_block" style="background-color: #'.$color.';" onclick="location.href=\''.$post_url.'\';">
                         <div class="page_block_title">
-                            <a href="'.$post_url.'"><h1>'.$post['title'].'</h1></a>
+                            <a href="'.$post_url.'"><h2>'.$post['title'].'</h2></a>
                         </div>
                         <div class="page_block_image" style="background-image:url(\''.$post['main_image_url'].'\'); border: 2px solid #'.get_hex_color($color, -15).'" title="'.$post['title'].'"></div>
                         <div class="page_block_content_right">
                             <div class="page_block_description">
-                                '.$post['description'].'
+                                <p>'.$post['description'].'</p>
                             </div>
                             <div class="page_block_time">
                                 <i class="far fa-clock"></i>&nbsp;'.get_time_to_read($post['content']).'

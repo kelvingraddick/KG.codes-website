@@ -7,6 +7,7 @@
 	$database_connection = connect_to_database();
     $setting = get_settings($database_connection);
     $seo = get_seo($database_connection, "blog");
+    $header_h_tag_number = 1;
     $from = isset($_GET['from']) ? $_GET['from'] : 0;
 ?>
 <!DOCTYPE html>
@@ -34,12 +35,12 @@
                     echo 
                     '<div class="page_block" style="background-color: #'.array_pop($colors).';" onclick="location.href=\''.$post_url.'\';">
                         <div class="page_block_title">
-                            <a href="'.$post_url.'"><h1>'.$post['title'].'</h1></a>
+                            <a href="'.$post_url.'"><h2>'.$post['title'].'</h2></a>
                         </div>
                         <div class="page_block_image" style="background-image:url(\''.$post['main_image_url'].'\');" title="'.$post['title'].'"></div>
                         <div class="page_block_content">
                             <div class="page_block_description">
-                                '.$post['description'].'
+                                <p>'.$post['description'].'</p>
                             </div>
                             <div class="page_block_time">
                                 <i class="far fa-clock"></i>&nbsp;'.get_time_to_read($post['content']).'

@@ -70,6 +70,13 @@ b {
     line-height: 26px;
 }
 
+.sidebar_footer_description h1,
+.sidebar_footer_description h2,
+.sidebar_footer_description h3 {
+    font-family: 'MuseoSans300', Fallback, sans-serif;
+    color: #262626;
+}
+
 .sidebar_footer_navigation_buttons {
     margin-top: 25px;
 }
