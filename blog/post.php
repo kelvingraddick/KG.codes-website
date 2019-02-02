@@ -10,7 +10,8 @@
     $slug = $_GET['slug'];
 	$result = mysqli_query($database_connection, "SELECT * FROM blog_posts WHERE slug = '$slug'");
 	if (!$result) { echo 'Could not find post by the slug specified.'; }
-	$post = mysqli_fetch_assoc($result);
+    $post = mysqli_fetch_assoc($result);
+    $post_url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,18 +19,19 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title><?php echo clean_quotes($post['title']." | KG The Maker"); ?></title>
+        <title><?php echo clean_quotes($post['title']); ?></title>
         <meta name="description" content="<?php echo clean_quotes($post['description']); ?>">
         <meta name="robots" content="index, follow">
+        <meta property="og:type" content="article" />
         <meta property="fb:app_id" content="361862767338317" />
         <meta property="og:description" content="<?php echo clean_quotes($post['description']); ?>" />
         <meta property="og:image" content="<?php echo $post['main_image_url']; ?>" />
-        <meta property="og:image:alt" content="<?php echo $post['title']; ?>" />
+        <meta property="og:image:alt" content="<?php echo clean_quotes($post['title']); ?>" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:title" content="<?php echo clean_quotes($post['title']); ?>" />
-        <meta property="og:url" content="<?php echo "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" />
-        <meta property="og:site_name" content="KGTheMaker.com" />
-        <meta property="article:author" content="Kelvin Graddick - KGTheMaker.com" />
+        <meta property="og:url" content="<?php echo $post_url; ?>" />
+        <meta property="og:site_name" content="KG The Maker" />
+        <meta property="article:author" content="Kelvin Graddick - KG The Maker" />
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@kgthemaker">
         <meta name="twitter:creator" content="@kgthemaker">
@@ -37,27 +39,40 @@
         <meta name="twitter:description" content="<?php echo clean_quotes($post['description']); ?>">
         <meta name="twitter:image:src" content="<?php echo $post['main_image_url']; ?>">
         <?php 
-            switch ($post['type']) {
-                default : echo '<meta property="og:type" content="article" /><meta property="twitter:card" content="summary_large_image" />'; break;
-            }
             include $_SERVER['DOCUMENT_ROOT'].'/css/main.php';
         ?>
 	</head>
 	<body>
         <script type="application/ld+json">
             {
-                "@context": "http://schema.org",
+                "@context": "https://schema.org",
                 "@type": "NewsArticle",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "<?php echo $post_url; ?>"
+                },
                 "headline": "<?php echo clean_quotes($post['title']); ?>",
                 "image": ["<?php echo $post['main_image_url']; ?>"],
                 "datePublished": "<?php echo date(DATE_ISO8601, strtotime($post['created_time'])); ?>",
+                "dateModified": "<?php echo date(DATE_ISO8601, strtotime($post['created_time'])); ?>",
+                "author": {
+                    "@type": "Person",
+                    "name": "Kelvin Graddick - KG The Maker"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Google",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "<?php echo $setting['logo']; ?>"
+                    }
+                },
                 "description": "<?php echo clean_quotes($post['description']); ?>",
                 "articleBody": "<?php echo clean_quotes($post['content']); ?>"
             }
         </script>
         <div class="page_left">
             <?php
-                $post_url = 'https://'.$_SERVER['SERVER_NAME'].'/blog/'.$post['slug'];
                 $colors = array('eed67a', 'ee7a92', '7a92ee', '7accee');
                 shuffle($colors);
             ?>
