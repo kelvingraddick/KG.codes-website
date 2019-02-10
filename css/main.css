@@ -17,6 +17,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    display: inline-block;
     font-family: 'MuseoSans900', Fallback, sans-serif;
     color: #4a4a4a;
 }
@@ -27,6 +28,11 @@ b {
 }
 
 
+
+.header {
+    font-family: 'MuseoSans900', Fallback, sans-serif;
+    color: #4a4a4a;
+}
 
 .sidebar_left, .sidebar_right {
     padding: 35px 45px 35px;
@@ -121,7 +127,11 @@ b {
     cursor: pointer;
 }
 
-.page_block_title:hover {
+.page_block_title h1:hover {
+    text-decoration: underline;
+}
+
+.page_block_title h2:hover {
     text-decoration: underline;
 }
 

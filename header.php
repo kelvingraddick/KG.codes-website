@@ -17,8 +17,8 @@
 <div class="sidebar_footer">
     <div class="sidebar_footer_title">
         <h<?php echo $header_h_tag_number; ?>>
-            APP/WEBSITE MAKER.<br />
-            BEAT MAKER.<br />
+            APP/WEBSITE MAKER. <br />
+            BEAT MAKER. <br />
             CONTENT CREATOR.
         </h<?php echo $header_h_tag_number; ?>>
     </div>

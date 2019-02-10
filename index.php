@@ -28,7 +28,7 @@
         <div class="page_right">
             <div class="page_block" style="background-color: #eed67a;" onclick="location.href='https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/';">
                 <div class="page_block_title">
-                    <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/"><h2>BEAT MAKER.</h2></a>
+                    <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/"><h2>BEAT MAKER</h2></a><span class="header">.</span>
                 </div>
                 <div class="page_block_widget">
                     <iframe id="mfs_html5" src="https://airbit.com/widgets/html5/?uid=1593&config=464605" class="beat_store" height="400" frameborder="0" scrolling="no"></iframe>
@@ -46,7 +46,7 @@
             </div>
             <div class="page_block" style="background-color: #ee7a92;">
                 <div class="page_block_title">
-                    <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/coding/"><h2>APP/WEBSITE MAKER.</h2></a>
+                    <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/coding/"><h2>APP/WEBSITE MAKER</h2></a><span class="header">.</span>
                 </div>
                 <div class="page_block_content_left" onclick="location.href='https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/copy-paste-app-snippeta';">
                     <table>
