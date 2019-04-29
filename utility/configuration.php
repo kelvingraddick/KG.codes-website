@@ -7,5 +7,6 @@
 	$database_password = "password";
 	$database_name = "name";
 
-    $sendgrid_api_key = "key";
+	$sendgrid_api_key = "key";
+	$recaptcha_secret_key = "key";
 ?>
