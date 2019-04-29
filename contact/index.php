@@ -9,6 +9,7 @@
     $seo = get_seo($database_connection, "contact");
     $colors = array('eed67a', 'ee7a92', '7a92ee', '7accee');
     shuffle($colors);
+    $failure = isset($_GET['failure']) ? $_GET['failure'] : false;
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,6 +20,7 @@
             echo get_metatags($seo, $setting); ; 
             include $_SERVER['DOCUMENT_ROOT'].'/css/main.php';
         ?>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
 	<body style="background-color: #<?php echo array_pop($colors); ?>;">
         <div class="page_left">
@@ -43,7 +45,14 @@
                     <input class="contact_radio" type="radio" name="join_email_list" value="2">&nbsp;Beats&nbsp;&nbsp;
                     <input class="contact_radio" type="radio" name="join_email_list" value="3">&nbsp;None
                     <br /><br />
+                    <div class="g-recaptcha" data-sitekey="6LfHLpUUAAAAAHi2_Rnsxq_y4yaTB1MFdBPrMiLg"></div>
+                    <br />
                     <button class="contact_button">Submit</button>
+                    <?php
+                        if ($failure == true) {
+                            echo '<br /><br /><div style="color:red;">reCAPTCHA failed! Please fill out the reCAPTCHA form.</div>';
+                        }
+                    ?>
                 </form>
             </div>
         </div>
