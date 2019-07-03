@@ -24,10 +24,10 @@
         <div class="page_left">
             <div class="page_block">
                 <div class="page_block_title">
-                    <h1>CONTACT KG THE MAKER</h1><span class="header">.</span>
+                    <h1>CONTACT KG.CODES</h1><span class="header">.</span>
                 </div>
                 <br />
-                Thanks for contacting KG The Maker!
+                Thanks for contacting KG.codes!
                 <br />
                 I will be in contact soon.
             </div>

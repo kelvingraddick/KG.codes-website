@@ -18,7 +18,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title><?php echo clean_quotes($beat['title']." | KG The Maker"); ?></title>
+        <title><?php echo clean_quotes($beat['title']." | KG.codes"); ?></title>
         <meta name="description" content="<?php echo clean_quotes($beat['short_description']); ?>">
         <meta name="robots" content="index, follow">
         <meta property="fb:app_id" content="361862767338317" />
@@ -29,13 +29,13 @@
         <meta property="og:image:type" content="image/png" />
         <meta property="og:title" content="<?php echo clean_quotes($beat['title']); ?>" />
         <meta property="og:url" content="<?php echo "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" />
-        <meta property="og:site_name" content="KGTheMaker.com" />
+        <meta property="og:site_name" content="KG.codes" />
         <meta property="og:price:amount" content="<?php echo $beat['sale_price']; ?>" />
         <meta property="og:price:currency" content="USD" />
         <meta property="twitter:card" content="product" />
         <meta name="twitter:card" content="product">
-        <meta name="twitter:site" content="@kgthemaker">
-        <meta name="twitter:creator" content="@kgthemaker">
+        <meta name="twitter:site" content="@KGcodes">
+        <meta name="twitter:creator" content="@KGcodes">
         <meta name="twitter:title" content="<?php echo clean_quotes($beat['title']); ?>">
         <meta name="twitter:description" content="<?php echo clean_quotes($beat['short_description']); ?>">
         <meta name="twitter:image:src" content="<?php echo $beat['main_image_url']; ?>">
@@ -56,7 +56,7 @@
                 "mpn": "<?php echo clean_quotes($beat['code']); ?>",
                 "brand": {
                     "@type": "Thing",
-                    "name": "KG The Maker"
+                    "name": "KG.codes"
                 },
                 "aggregateRating": {
                     "@type": "AggregateRating",
@@ -71,7 +71,7 @@
                     "availability": "http://schema.org/InStock",
                     "seller": {
                         "@type": "Organization",
-                        "name": "KG The Maker"
+                        "name": "KG.codes"
                     }
                 }
             }
@@ -91,7 +91,7 @@
                     <div class="post_sub_title">
                         $<?php echo $beat['sale_price']; ?> &middot;
                         <i class="fab fa-facebook full_post_social_icon" onclick="shareUrlToFacebook(this, '<?php echo $beat_url; ?>');"></i> &nbsp;
-                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($beat['title']); ?>&url=<?php echo $beat_url; ?>&via=kgthemaker" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
+                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($beat['title']); ?>&url=<?php echo $beat_url; ?>&via=KGcodes" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
                         <a href="https://www.pinterest.com/pin/create/button/?url=<?php echo $beat_url; ?>&media=<?php echo $beat['tall_image_url']; ?>&description=<?php echo urlencode($beat['title']); ?>" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
                             <i class="fab fa-pinterest full_post_social_icon"></i>
                         </a>
@@ -104,7 +104,7 @@
                     <div class="post_sub_title">
                         Want to share this? &nbsp;&nbsp;
                         <i class="fab fa-facebook full_post_social_icon" onclick="shareUrlToFacebook(this, '<?php echo $beat_url; ?>');"></i> &nbsp;
-                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($beat['title']); ?>&url=<?php echo $beat_url; ?>&via=kgthemaker" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
+                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($beat['title']); ?>&url=<?php echo $beat_url; ?>&via=KGcodes" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
                         <a href="https://www.pinterest.com/pin/create/button/?url=<?php echo $beat_url; ?>&media=<?php echo $beat['tall_image_url']; ?>&description=<?php echo urlencode($beat['title']); ?>" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
                             <i class="fab fa-pinterest full_post_social_icon"></i>
                         </a>

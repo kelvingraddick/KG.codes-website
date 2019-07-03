@@ -30,11 +30,11 @@
         <meta property="og:image:type" content="image/png" />
         <meta property="og:title" content="<?php echo clean_quotes($post['title']); ?>" />
         <meta property="og:url" content="<?php echo $post_url; ?>" />
-        <meta property="og:site_name" content="KG The Maker" />
-        <meta property="article:author" content="Kelvin Graddick - KG The Maker" />
+        <meta property="og:site_name" content="KG.codes" />
+        <meta property="article:author" content="Kelvin Graddick - KG.codes" />
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="@kgthemaker">
-        <meta name="twitter:creator" content="@kgthemaker">
+        <meta name="twitter:site" content="@KGcodes">
+        <meta name="twitter:creator" content="@KGcodes">
         <meta name="twitter:title" content="<?php echo clean_quotes($post['title']); ?>">
         <meta name="twitter:description" content="<?php echo clean_quotes($post['description']); ?>">
         <meta name="twitter:image:src" content="<?php echo $post['main_image_url']; ?>">
@@ -57,7 +57,7 @@
                 "dateModified": "<?php echo date(DATE_ISO8601, strtotime($post['created_time'])); ?>",
                 "author": {
                     "@type": "Person",
-                    "name": "Kelvin Graddick - KG The Maker"
+                    "name": "Kelvin Graddick - KG.codes"
                 },
                 "publisher": {
                     "@type": "Organization",
@@ -68,7 +68,7 @@
                     }
                 },
                 "description": "<?php echo clean_quotes($post['description']); ?>",
-                "articleBody": "<?php echo clean_quotes($post['content']); ?>"
+                "articleBody": "<?php echo strip_tags(clean_quotes($post['content'])); ?>"
             }
         </script>
         <div class="page_left">
@@ -86,7 +86,7 @@
                         <?php echo $post['author']; ?> &middot;
                         <?php echo get_time_to_read($post['content']); ?> &middot;&nbsp;
                         <i class="fab fa-facebook full_post_social_icon" onclick="shareUrlToFacebook(this, '<?php echo $post_url; ?>');"></i> &nbsp;
-                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($post['title']); ?>&url=<?php echo $post_url; ?>&via=kgthemaker" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
+                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($post['title']); ?>&url=<?php echo $post_url; ?>&via=KGcodes" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
                         <a href="https://www.pinterest.com/pin/create/button/?url=<?php echo $post_url; ?>&media=<?php echo $post['tall_image_url']; ?>&description=<?php echo urlencode($post['title']); ?>" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
                             <i class="fab fa-pinterest full_post_social_icon"></i>
                         </a>
@@ -97,7 +97,7 @@
                     <div class="post_sub_title">
                         Want to share this? &nbsp;&nbsp;
                         <i class="fab fa-facebook full_post_social_icon" onclick="shareUrlToFacebook(this, '<?php echo $post_url; ?>');"></i> &nbsp;
-                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($post['title']); ?>&url=<?php echo $post_url; ?>&via=kgthemaker" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
+                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($post['title']); ?>&url=<?php echo $post_url; ?>&via=KGcodes" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
                         <a href="https://www.pinterest.com/pin/create/button/?url=<?php echo $post_url; ?>&media=<?php echo $post['tall_image_url']; ?>&description=<?php echo urlencode($post['title']); ?>" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
                             <i class="fab fa-pinterest full_post_social_icon"></i>
                         </a>

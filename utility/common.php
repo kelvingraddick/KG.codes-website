@@ -39,9 +39,9 @@
                     <meta property="og:image" content="{logo}" />
                     <meta property="og:title" content="{title}" />
                     <meta property="og:url" content="{url}" />
-                    <meta property="og:site_name" content="KG The Maker" />
+                    <meta property="og:site_name" content="KG.codes" />
                     <meta property="og:type" content="article" />
-                    <meta property="article:author" content="KG The Maker" />
+                    <meta property="article:author" content="KG.codes" />
                     <meta name="twitter:card" content="summary_large_image">
                     <meta name="twitter:site" content="{twitter}">
                     <meta name="twitter:creator" content="{twitter}">
@@ -52,7 +52,7 @@ EOF;
         $metatags = str_replace("{title}", $seo['title'], $metatags);
         $metatags = str_replace("{description}", $seo['description'], $metatags); 
         $metatags = str_replace("{keywords}", $seo['keywords'], $metatags);
-        $metatags = str_replace("{logo}", "https://www.kgthemaker.com/images/background-yellow.png", $metatags);
+        $metatags = str_replace("{logo}", "https://www.kg.codes/images/background-yellow.png", $metatags);
         $metatags = str_replace("{url}", "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], $metatags);
         $metatags = str_replace("{twitter}", $setting['twitter_link'], $metatags);
         return $metatags;

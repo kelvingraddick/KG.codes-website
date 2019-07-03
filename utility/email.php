@@ -16,7 +16,7 @@
             ],
             "from": {
                 "email": "kelvingraddick@gmail.com",
-                "name": "KG The Maker"
+                "name": "KG.codes"
             },
             "content": [
                 {

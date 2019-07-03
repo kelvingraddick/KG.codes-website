@@ -22,10 +22,10 @@
         <div class="page_left">
             <div class="page_block" style="background-color: #ee7a92;">
                 <div class="page_block_title">
-                    <h1>KG THE MAKER CODING</h1><span class="header">.</span>
+                    <h1>KG.CODES CODING</h1><span class="header">.</span>
                 </div>
                 <br />
-                Hi. I am KG The Maker. App/website maker. Check out my programming projects and contributions below!
+                Hi. I am KG.codes. App/website maker. Check out my programming projects and contributions below!
                 <br />
                 Contact me today for inquiries or collaboration.
                 <br /><br />

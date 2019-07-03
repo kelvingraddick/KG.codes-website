@@ -59,7 +59,7 @@
             <br><br>
             In the meantime, feel free to connect with me faster using one of the social buttons below.
             <br><br>
-            - KG The Maker
+            - KG.codes
             <br><br>
         ';
         $email['body'] = get_email_template($content, $setting);
