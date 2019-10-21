@@ -15,7 +15,7 @@
                 }
             ],
             "from": {
-                "email": "kelvingraddick@gmail.com",
+                "email": "kelvingraddick@kg.codes",
                 "name": "KG.codes"
             },
             "content": [
