@@ -7,8 +7,6 @@
 	$database_connection = connect_to_database();
     $setting = get_settings($database_connection);
     $seo = get_seo($database_connection, "contact");
-    $colors = array('eed67a', 'ee7a92', '7a92ee', '7accee');
-    shuffle($colors);
     $failure = isset($_GET['failure']) ? $_GET['failure'] : false;
 ?>
 <!DOCTYPE html>
@@ -22,11 +20,16 @@
         ?>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
-	<body style="background-color: #<?php echo array_pop($colors); ?>;">
-        <div class="page_left">
-            <div class="page_block">
+	<body>
+        <div class="page_left" style="padding: 20px;">
+            <div class="page_block" style="background-color: #eed67a;">
+                <div class="page_block_circle_buttons">
+                    <div class="page_block_circle_button"></div>
+                    <div class="page_block_circle_button"></div>
+                    <div class="page_block_circle_button"></div>
+                </div>
                 <div class="page_block_title">
-                    <h1>CONTACT KG.CODES</h1><span class="header">.</span>
+                    <h1>Contact KG.codes</h1><span class="header">.</span>
                 </div>
                 <form id="contact_form" class="contact_form" method="post" action="submit.php">
                     <div class="contact_label">Message</div>
@@ -40,12 +43,10 @@
                     <div class="contact_label">Phone Number</div>
                     <input class="contact_textbox" type="text" name="phone_number" value="">
                     <div class="contact_label">Join Email List?</div>
-                    <input class="contact_radio" type="radio" name="join_email_list" value="0" checked="checked">&nbsp;All&nbsp;&nbsp;
-                    <input class="contact_radio" type="radio" name="join_email_list" value="1">&nbsp;Blog&nbsp;&nbsp;
-                    <input class="contact_radio" type="radio" name="join_email_list" value="2">&nbsp;Beats&nbsp;&nbsp;
-                    <input class="contact_radio" type="radio" name="join_email_list" value="3">&nbsp;None
+                    <input class="contact_radio" type="radio" name="join_email_list" value="0" checked="checked">&nbsp;Yes&nbsp;&nbsp;
+                    <input class="contact_radio" type="radio" name="join_email_list" value="1">&nbsp;No&nbsp;&nbsp;
                     <br /><br />
-                    <div class="g-recaptcha" data-sitekey="6LfHLpUUAAAAAHi2_Rnsxq_y4yaTB1MFdBPrMiLg"></div>
+                    <div class="g-recaptcha" data-sitekey="6LdZ08QUAAAAAAoH7slZ0M9G1AU4lJnESinBYays"></div>
                     <br />
                     <button class="contact_button">Submit</button>
                     <?php

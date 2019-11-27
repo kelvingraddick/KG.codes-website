@@ -17,20 +17,19 @@
 <div class="sidebar_footer">
     <div class="sidebar_footer_title">
         <h<?php echo $header_h_tag_number; ?>>
-            APP/WEBSITE MAKER. <br />
-            BEAT MAKER. <br />
-            CONTENT CREATOR.
+            Software Developer. <br />
+            App + Website Maker. <br />
+            Content Creator.
         </h<?php echo $header_h_tag_number; ?>>
     </div>
     <div class="sidebar_footer_description">
-        <p>Hi. I'm Kelvin Graddick also known as KG.codes. I'm a software developer/programmer, a music producer, and content creator. I'm all about digital creation.</p>
+        <p>Hi. I'm Kelvin Graddick also known as KG.codes. I'm a software developer / programmer, app + website developer, and content creator. I'm all about digital creation.</p>
     </div>
     <div class="sidebar_footer_navigation_buttons">
-        <a class="sidebar_footer_navigation_button" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>">HOME</a>&nbsp;&nbsp;&nbsp;
-        <a class="sidebar_footer_navigation_button" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/coding/">CODING</a>&nbsp;&nbsp;&nbsp;
-        <a class="sidebar_footer_navigation_button" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/">BEATS</a>&nbsp;&nbsp;&nbsp;
-        <a class="sidebar_footer_navigation_button" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/">BLOG</a>&nbsp;&nbsp;&nbsp;
-        <a class="sidebar_footer_navigation_button" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/contact/">CONTACT</a>
+        <a class="sidebar_footer_navigation_button" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>">Home</a>&nbsp;&nbsp;&nbsp;
+        <a class="sidebar_footer_navigation_button" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/coding/">Coding</a>&nbsp;&nbsp;&nbsp;
+        <a class="sidebar_footer_navigation_button" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/">Blog</a>&nbsp;&nbsp;&nbsp;
+        <a class="sidebar_footer_navigation_button" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/contact/">Contact</a>
     </div>
     <div class="sidebar_footer_social_buttons">
         <a class="sidebar_footer_social_button" target="_blank" href="<?php echo $setting['facebook_link']; ?>"><i class="fab fa-facebook"></i></a> &nbsp;&nbsp;&nbsp;

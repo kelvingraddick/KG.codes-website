@@ -1,42 +1,46 @@
-@font-face { font-family: 'MuseoSans100'; src: url('../fonts/MuseoSans100.otf'); }
-@font-face { font-family: 'MuseoSans300'; src: url('../fonts/MuseoSans300.otf'); }
-@font-face { font-family: 'MuseoSans500'; src: url('../fonts/MuseoSans500.otf'); }
-@font-face { font-family: 'MuseoSans900'; src: url('../fonts/MuseoSans900.otf'); }
-
 html, body {
     height: 100%;
     max-width: 100%;
     background-color: #fafafa;
-    font-family: 'MuseoSans300', Fallback, sans-serif;
+    font-family: -apple-system, 
+                 BlinkMacSystemFont, 
+                 "Segoe UI", 
+                 Roboto, 
+                 Helvetica,
+                 Arial,
+                 sans-serif,
+                 "Apple Color Emoji",
+                 "Segoe UI Emoji",
+                 "Segoe UI Symbol";
+    font-weight: 400;
     color: #262626;
 }
 
 a {
-    font-family: 'MuseoSans500', Fallback, sans-serif;
+    font-weight: 700;
     color: #4a4a4a;
 }
 
 h1, h2, h3, h4, h5, h6 {
     display: inline-block;
-    font-family: 'MuseoSans900', Fallback, sans-serif;
+    font-weight: 700;
     color: #4a4a4a;
 }
 
 b {
-    font-family: 'MuseoSans500', Fallback, sans-serif;
+    font-weight: 500;
     color: #4a4a4a;
 }
 
 
 
 .header {
-    font-family: 'MuseoSans900', Fallback, sans-serif;
+    font-weight: 900;
     color: #4a4a4a;
 }
 
 .sidebar_left, .sidebar_right {
-    padding: 35px 45px 35px;
-    background-color: #fafafa;
+    padding: 40px 20px 20px;
 }
 
 .sidebar_header {
@@ -56,8 +60,8 @@ b {
 }
 
 .sidebar_header_logo {
-    max-height: 60px;
-    margin-top: 10px;
+    max-height: 50px;
+    margin-top: 15px;
     margin-left: 10px;
 }
 
@@ -66,20 +70,20 @@ b {
 }
 
 .sidebar_footer_title {
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 32px;
+    line-height: 38px;
 }
 
 .sidebar_footer_description {
     margin-top: 25px;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
 }
 
 .sidebar_footer_description h1,
 .sidebar_footer_description h2,
 .sidebar_footer_description h3 {
-    font-family: 'MuseoSans300', Fallback, sans-serif;
+    font-weight: 400;
     color: #262626;
 }
 
@@ -113,12 +117,35 @@ b {
 
 
 .page_block {
+    position: relative;
     width: 100%;
-    padding: 35px 45px 35px;
+    padding: 40px 15px 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 15px rgba(27,31,35,.15),0 0 1px rgba(106,115,125,.35);
 }
 
 .page_block img {
     border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.page_block_circle_buttons {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 12px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.page_block_circle_button {
+    float: left;
+    height: 12px;
+    width: 12px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-color: gray; 
+    opacity: 0.2;
 }
 
 .page_block_title {
@@ -156,7 +183,7 @@ b {
 .page_block_description {
     margin-top: 25px;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
 }
 
 .page_block_time {
@@ -164,7 +191,7 @@ b {
     margin-top: 20px;
     font-size: 14px;
     line-height: 20px;
-    font-family: 'MuseoSans500', Fallback, sans-serif;
+    font-weight: 500;
     color: #4a4a4a;
 }
 
@@ -173,7 +200,7 @@ b {
     margin-top: 20px;
     font-size: 14px;
     line-height: 20px;
-    font-family: 'MuseoSans500', Fallback, sans-serif;
+    font-weight: 500;
     color: #4a4a4a;
     cursor: pointer;
 }
@@ -215,7 +242,7 @@ b {
 }
 
 .post_content {
-    padding: 45px;
+    padding: 35px 20px 35px;
 }
 
 .post_title {
@@ -226,13 +253,13 @@ b {
 .post_sub_title {
     padding-top: 10px;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
 }
 
 .post_body {
     padding-top: 35px;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
 }
 
 .post_body h2 {
@@ -269,9 +296,9 @@ b {
     border: 2px solid #4a4a4a;
     border-radius: 5px;
     background-color: transparent;
-    font-family: 'MuseoSans300', Fallback, sans-serif;
+    font-weight: 400;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
     color: #262626;
 }
 
@@ -281,17 +308,17 @@ b {
     border: 2px solid #4a4a4a;
     border-radius: 5px;
     background-color: transparent;
-    font-family: 'MuseoSans300', Fallback, sans-serif;
+    font-weight: 400;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
     color: #262626;
 }
 
 .contact_radio {
     margin-top: 5px;
-    font-family: 'MuseoSans300', Fallback, sans-serif;
+    font-weight: 400;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
     color: #262626;
 }
 
@@ -300,9 +327,9 @@ b {
     border: 2px solid #4a4a4a;
     border-radius: 5px;
     background-color: transparent;
-    font-family: 'MuseoSans300', Fallback, sans-serif;
+    font-weight: 400;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 24px;
     color: #262626;
     cursor: pointer;
 }
@@ -355,7 +382,7 @@ b {
     }
 
     .page_block {
-        padding: 65px;
+        padding: 45px;
     }
 
     .page_block_image {

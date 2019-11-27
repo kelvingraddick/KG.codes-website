@@ -91,13 +91,6 @@
                                                         <br>
                                                         {content}                                
                                                         <br><br>
-                                                        <div style=" font-weight: bold; font-size: 18px; line-height: 24px; color: #D03C0F; border-top: 1px solid #ddd;"></div>
-                                                        <br>                           
-                                                        <a src="{facebook_link}"><img src="http://www.wavelinkllc.com/images/fb.png" width="4%"></a>
-                                                        <a src="{instagram_link}"><img src="http://www.wavelinkllc.com/images/instagram.png" width="4%"></a>
-                                                        <a src="{twitter_link}"><img src="http://www.wavelinkllc.com/images/twitter.png" width="4%"></a>
-                                                        <a src="{linkedin_link}"><img src="http://www.wavelinkllc.com/images/linkedin.png" width="4%"></a>
-                                                        <br><br>
                                                     </td>
                                                 </tr>
                                             </tbody>

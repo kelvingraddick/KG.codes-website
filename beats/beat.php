@@ -79,7 +79,7 @@
         <div class="page_left">
             <?php
                 $beat_url = 'https://'.$_SERVER['SERVER_NAME'].'/beats/'.$beat['slug'];
-                $colors = array('eed67a', 'ee7a92', '7a92ee', '7accee');
+                $colors = array('eed67a', 'fafafa');
                 shuffle($colors);
             ?>
             <div class="post">

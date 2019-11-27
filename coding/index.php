@@ -18,11 +18,16 @@
             include $_SERVER['DOCUMENT_ROOT'].'/css/main.php';
         ?>
 	</head>
-	<body style="background-color: #ee7a92;">
-        <div class="page_left">
-            <div class="page_block" style="background-color: #ee7a92;">
+	<body>
+        <div class="page_left" style="padding: 20px;">
+            <div class="page_block" style="background-color: #eed67a;">
+                <div class="page_block_circle_buttons">
+                    <div class="page_block_circle_button"></div>
+                    <div class="page_block_circle_button"></div>
+                    <div class="page_block_circle_button"></div>
+                </div>
                 <div class="page_block_title">
-                    <h1>KG.CODES CODING</h1><span class="header">.</span>
+                    <h1>KG.codes Coding</h1><span class="header">.</span>
                 </div>
                 <br />
                 Hi. I am KG.codes. App/website maker. Check out my programming projects and contributions below!

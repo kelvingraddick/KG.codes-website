@@ -37,10 +37,15 @@
         <!-- End Facebook Pixel Code -->
 	</head>
 	<body>
-        <div class="page_left">
+        <div class="page_left" style="padding: 20px;">
             <div class="page_block" style="background-color: #eed67a;">
+                <div class="page_block_circle_buttons">
+                    <div class="page_block_circle_button"></div>
+                    <div class="page_block_circle_button"></div>
+                    <div class="page_block_circle_button"></div>
+                </div>
                 <div class="page_block_title">
-                    <h1>KG.CODES BEATS</h1><span class="header">.</span>
+                    <h1>KG.codes Beats</h1><span class="header">.</span>
                 </div>
                 <br />
                 Hi. I am KG codes. Beat maker. Listen to and download hip-hop / pop / R&B beats produced by me and inspired by the greats.

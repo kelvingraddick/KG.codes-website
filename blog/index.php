@@ -21,7 +21,7 @@
         ?>
 	</head>
 	<body>
-        <div class="page_left">
+        <div class="page_left" style="padding: 20px;">
             <?php
                 $latest_posts_query = "SELECT * FROM blog_posts WHERE is_published = 1 ORDER BY created_time DESC LIMIT 10 OFFSET $from";
                 $results = mysqli_query($database_connection, $latest_posts_query) or die(mysql_error());
@@ -29,11 +29,16 @@
                 while ($post = mysqli_fetch_array( $results, MYSQL_ASSOC )) { 
                     $post_url = 'https://'.$_SERVER['SERVER_NAME'].'/blog/'.$post['slug'];
                     if (empty($colors)) {
-                        $colors = array('eed67a', 'ee7a92', '7a92ee', '7accee');
+                        $colors = array('eed67a', 'fafafa');
                         shuffle($colors);
                     }
                     echo 
                     '<div class="page_block" style="background-color: #'.array_pop($colors).';" onclick="location.href=\''.$post_url.'\';">
+                        <div class="page_block_circle_buttons">
+                            <div class="page_block_circle_button"></div>
+                            <div class="page_block_circle_button"></div>
+                            <div class="page_block_circle_button"></div>
+                        </div>
                         <div class="page_block_title">
                             <a href="'.$post_url.'"><h2>'.$post['title'].'</h2></a>
                         </div>

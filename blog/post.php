@@ -73,7 +73,7 @@
         </script>
         <div class="page_left">
             <?php
-                $colors = array('eed67a', 'ee7a92', '7a92ee', '7accee');
+                $colors = array('eed67a', 'fafafa');
                 shuffle($colors);
             ?>
             <div class="post">

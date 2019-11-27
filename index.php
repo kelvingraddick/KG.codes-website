@@ -25,10 +25,15 @@
         <div class="sidebar_left">
             <?php include $_SERVER['DOCUMENT_ROOT'].'/header.php'; ?>
         </div>
-        <div class="page_right">
+        <div class="page_right" style="padding: 20px;">
             <div class="page_block" style="background-color: #eed67a;" onclick="location.href='https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/';">
+                <div class="page_block_circle_buttons">
+                    <div class="page_block_circle_button"></div>
+                    <div class="page_block_circle_button"></div>
+                    <div class="page_block_circle_button"></div>
+                </div>
                 <div class="page_block_title">
-                    <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/"><h2>BEAT MAKER</h2></a><span class="header">.</span>
+                    <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/"><h2>Beat Maker</h2></a><span class="header">.</span>
                 </div>
                 <div class="page_block_widget">
                     <iframe id="mfs_html5" src="https://airbit.com/widgets/html5/?uid=1593&config=464605" class="beat_store" height="400" frameborder="0" scrolling="no"></iframe>
@@ -44,9 +49,14 @@
                     </div>
                 </div>
             </div>
-            <div class="page_block" style="background-color: #ee7a92;">
+            <div class="page_block" style="background-color: #fafafa;">
+                <div class="page_block_circle_buttons">
+                    <div class="page_block_circle_button"></div>
+                    <div class="page_block_circle_button"></div>
+                    <div class="page_block_circle_button"></div>
+                </div>
                 <div class="page_block_title">
-                    <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/coding/"><h2>APP/WEBSITE MAKER</h2></a><span class="header">.</span>
+                    <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/coding/"><h2>App + Website Maker</h2></a><span class="header">.</span>
                 </div>
                 <div class="page_block_content_left" onclick="location.href='https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/copy-paste-app-snippeta';">
                     <table>
@@ -136,12 +146,17 @@
                 while ($post = mysqli_fetch_array( $results, MYSQL_ASSOC )) { 
                     $post_url = 'https://'.$_SERVER['SERVER_NAME'].'/blog/'.$post['slug'];
                     if (empty($colors)) {
-                        $colors = array('eed67a', 'ee7a92', '7a92ee', '7accee');
+                        $colors = array('eed67a', 'fafafa');
                         shuffle($colors);
                     }
                     $color = array_pop($colors);
                     echo 
                     '<div class="page_block" style="background-color: #'.$color.';" onclick="location.href=\''.$post_url.'\';">
+                        <div class="page_block_circle_buttons">
+                            <div class="page_block_circle_button"></div>
+                            <div class="page_block_circle_button"></div>
+                            <div class="page_block_circle_button"></div>
+                        </div>
                         <div class="page_block_title">
                             <a href="'.$post_url.'"><h2>'.$post['title'].'</h2></a>
                         </div>
@@ -162,7 +177,7 @@
             ?>
             <?php
                 if (mysqli_num_rows(mysqli_query($database_connection, $latest_posts_query))) {
-                    echo '<div class="next_button"><a href="/?from='.($from + 10).'" rel="next">PREVIOUS POSTS <i class="fa fa-arrow-right"></i></a></div>';
+                    echo '<div class="next_button"><a href="/?from='.($from + 10).'" rel="next">Previous Posts <i class="fa fa-arrow-right"></i></a></div>';
                 }
             ?>
         </div>

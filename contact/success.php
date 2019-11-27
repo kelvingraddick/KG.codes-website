@@ -7,8 +7,6 @@
 	$database_connection = connect_to_database();
     $setting = get_settings($database_connection);
     $seo = get_seo($database_connection, "contact");
-    $colors = array('eed67a', 'ee7a92', '7a92ee', '7accee');
-    shuffle($colors);
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,11 +18,16 @@
             include $_SERVER['DOCUMENT_ROOT'].'/css/main.php';
         ?>
 	</head>
-	<body style="background-color: #<?php echo array_pop($colors); ?>;">
-        <div class="page_left">
-            <div class="page_block">
+	<body>
+        <div class="page_left" style="padding: 20px;">
+            <div class="page_block" style="background-color: #eed67a;">
+                <div class="page_block_circle_buttons">
+                    <div class="page_block_circle_button"></div>
+                    <div class="page_block_circle_button"></div>
+                    <div class="page_block_circle_button"></div>
+                </div>
                 <div class="page_block_title">
-                    <h1>CONTACT KG.CODES</h1><span class="header">.</span>
+                    <h1>Contact KG.codes</h1><span class="header">.</span>
                 </div>
                 <br />
                 Thanks for contacting KG.codes!
