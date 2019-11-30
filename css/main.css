@@ -125,6 +125,10 @@ b {
     box-shadow: 0 1px 15px rgba(27,31,35,.15),0 0 1px rgba(106,115,125,.35);
 }
 
+.page_block.page_block_cards {
+    padding: 0px 0px 15px 0px;
+}
+
 .page_block img {
     border: 2px solid rgba(0, 0, 0, 0.1);
 }
@@ -152,6 +156,10 @@ b {
     font-size: 22px;
     line-height: 28px;
     cursor: pointer;
+}
+
+.page_block_title.page_block_title_cards {
+    padding: 40px 15px 25px;
 }
 
 .page_block_title h1:hover {
@@ -182,6 +190,13 @@ b {
 
 .page_block_description {
     margin-top: 25px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.page_block_description.page_block_description_cards {
+    margin-top: 0px;
+    padding: 0px 15px 25px 15px;
     font-size: 16px;
     line-height: 24px;
 }
@@ -226,6 +241,88 @@ b {
 .next_button {
     padding: 25px 55px;
     text-align: right;
+}
+
+
+
+.cards {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+
+.cards::-webkit-scrollbar {
+    display: none;
+}
+
+.cards td {
+    height: 100%;
+}
+
+.card {
+    display: inline-block;
+    width: 370px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 1px 15px rgba(27,31,35,.15),0 0 1px rgba(106,115,125,.35);
+    border-radius: 6px;
+    margin-right: 15px;
+}
+
+.card_header {
+    height: calc(100% - 50px);
+    padding: 18px 24px;
+}
+
+.card_header_title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 5px;
+}
+
+.card_header_description {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4a4a4a;
+}
+
+.card_header_icon {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.card_footer {
+    height: 50px;
+    padding: 14px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #A2A2A2;
+    border-top: 1px solid #e1e4e8;
+}
+
+.card_footer_link {
+    cursor: pointer;
+}
+
+a.card_footer_link {
+    color: #A2A2A2;
+    font-weight: 600;
+}
+
+.card_footer_link_right {
+    cursor: pointer;
+    float: right;
 }
 
 
@@ -383,6 +480,19 @@ b {
 
     .page_block {
         padding: 45px;
+    }
+
+    .page_block.page_block_cards {
+        padding: 0px 0px 45px 0px;
+    }
+
+    .page_block_title.page_block_title_cards {
+        padding: 45px 45px 25px 45px;
+    }
+
+    .page_block_description.page_block_description_cards {
+        margin-top: 0px;
+        padding: 0px 45px 25px 45px;
     }
 
     .page_block_image {

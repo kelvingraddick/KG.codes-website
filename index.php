@@ -26,117 +26,179 @@
             <?php include $_SERVER['DOCUMENT_ROOT'].'/header.php'; ?>
         </div>
         <div class="page_right" style="padding: 20px;">
-            <div class="page_block" style="background-color: #eed67a;" onclick="location.href='https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/';">
+            <div class="page_block page_block_cards" style="background-color: #eed67a;">
                 <div class="page_block_circle_buttons">
                     <div class="page_block_circle_button"></div>
                     <div class="page_block_circle_button"></div>
                     <div class="page_block_circle_button"></div>
                 </div>
-                <div class="page_block_title">
-                    <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/beats/"><h2>Beat Maker</h2></a><span class="header">.</span>
-                </div>
-                <div class="page_block_widget">
-                    <iframe id="mfs_html5" src="https://airbit.com/widgets/html5/?uid=1593&config=464605" class="beat_store" height="400" frameborder="0" scrolling="no"></iframe>
-                </div>
-                <div class="page_block_content_right">
-                    <div class="page_block_description">
-                        <p>Listen to and download hip-hop / pop / R&B beats produced by KG.codes. Download instantly and/or contact me directly for collaboration.</p><br />
-                        <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-1.jpg" alt="KG.codes music producer" style="width: 49%; border-radius: 5px;" />
-                        <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-2.jpg" alt="KG.codes music producer" style="width: 49%; border-radius: 5px;" />
-                    </div>
-                    <div class="page_block_button">
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="page_block" style="background-color: #fafafa;">
-                <div class="page_block_circle_buttons">
-                    <div class="page_block_circle_button"></div>
-                    <div class="page_block_circle_button"></div>
-                    <div class="page_block_circle_button"></div>
-                </div>
-                <div class="page_block_title">
+                <div class="page_block_title page_block_title_cards">
                     <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/coding/"><h2>App + Website Maker</h2></a><span class="header">.</span>
                 </div>
-                <div class="page_block_content_left" onclick="location.href='https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/copy-paste-app-snippeta';">
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="page_block_icon" style="background-image: url('https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/snippeta-icon.png');"></div>
-                            </td>
-                            <td>
-                                <div class="page_block_description">
-                                    <p><b>SNIPPETA IOS APP</b> &middot; Copy, paste, and manage snippets of text! Copy snippet text to your clipboard with a single tap; no highlighting/long-tapping!</p>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="page_block_time">
-                        <i class="fas fa-mobile"></i>&nbsp;App
-                    </div>
-                    <div class="page_block_button">
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
+                <div class="page_block_description page_block_description_cards">
+                    <p>Hi. I'm Kelvin Graddick also known as KG.codes. I'm a software developer / programmer, app + website developer, and content creator. I'm all about digital creation.</p>
                 </div>
-                <div class="page_block_content_right" onclick="window.open('https://www.linkify.bio');">
+                <div id="cards_left" class="cards">
                     <table>
                         <tr>
                             <td>
-                                <div class="page_block_icon" style="background-image: url('https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/linkify-bio-icon.png');"></div>
+                                <div class="card">
+                                    <div class="card_header">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="card_header_title">
+                                                        Snippeta &middot; iOS app
+                                                    </div>
+                                                    <div class="card_header_description">
+                                                        Copy, manage, and paste snippets of text to your clipboard with a single tap; no highlighting/long-tapping!
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="card_header_icon" style="background-image: url('https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/snippeta-icon.png');"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card_footer">
+                                        <a class="card_footer_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/copy-paste-app-snippeta"><i class="fas fa-info-circle"></i> Details</a>
+                                        <a class="card_footer_link card_footer_link_right" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/copy-paste-app-snippeta"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
                             </td>
-                            <td>
-                                <div class="page_block_description">
-                                    <p><b>LINKIFY.BIO WEBSITE</b> &middot; Quickly provide multiple links in a social bio or ad through a single link!</p>
+                            <td>   
+                                <div class="card">
+                                    <div class="card_header">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="card_header_title">
+                                                        Linkify.Bio &middot; website
+                                                    </div>
+                                                    <div class="card_header_description">
+                                                        Quickly provide multiple links in a social bio or ad through a single link!
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="card_header_icon" style="background-image: url('https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/linkify-bio-icon.png');"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card_footer">
+                                        <a class="card_footer_link" href="https://www.linkify.bio"><i class="fas fa-info-circle"></i> Details</a>
+                                        <a class="card_footer_link card_footer_link_right" href="https://github.com/kelvingraddick/Linkify.Bio-website"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td> 
+                                <div class="card">
+                                    <div class="card_header">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="card_header_title">
+                                                        Wave Link &middot; website
+                                                    </div>
+                                                    <div class="card_header_description">
+                                                        Creative 3D website developed for software development company Wave Link, LLC.
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="card_header_icon" style="background-image: url('https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/wavelink-icon.png');"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card_footer">
+                                        <a class="card_footer_link" href="http://www.wavelinkllc.com"><i class="fas fa-info-circle"></i> Details</a>
+                                        <a class="card_footer_link card_footer_link_right" href="http://www.wavelinkllc.com"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
                                 </div>
                             </td>
                         </tr>
-                    </table>
-                    <div class="page_block_time">
-                        <i class="fas fa-laptop"></i>&nbsp;Website
-                    </div>
-                    <div class="page_block_button">
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
+                    </table> 
                 </div>
-                <div class="page_block_content_left" onclick="window.open('http://www.wavelinkllc.com');">
+                <div id="cards_right" class="cards">
                     <table>
                         <tr>
                             <td>
-                                <div class="page_block_icon" style="background-image: url('https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/wavelink-icon.png');"></div>
+                                <div class="card">
+                                    <div class="card_header">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="card_header_title">
+                                                        GitHub &middot; KG.codes
+                                                    </div>
+                                                    <div class="card_header_description">
+                                                        My personal GitHub page with more of my programming projects and contributions.
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="card_header_icon" style="background-image: url('https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/github-icon.png');"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card_footer">
+                                        <a class="card_footer_link" href="https://github.com/kelvingraddick"><i class="fas fa-info-circle"></i> Details</a>
+                                        <a class="card_footer_link card_footer_link_right" href="https://github.com/kelvingraddick"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
                             </td>
                             <td>
-                                <div class="page_block_description">
-                                    <p><b>WAVE LINK, LLC WEBSITE</b> &middot; Creative 3D website developed for software development company Wave Link, LLC.</p>
+                                <div class="card">
+                                    <div class="card_header">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="card_header_title">
+                                                        KG.codes &middot; website
+                                                    </div>
+                                                    <div class="card_header_description">
+                                                        My personal/professional website, portfolio, and blog (this website 😉)
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="card_header_icon" style="background-image: url('https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-logo-portrait.png');"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card_footer">
+                                        <a class="card_footer_link" href="https://github.com/kelvingraddick"><i class="fas fa-info-circle"></i> Details</a>
+                                        <a class="card_footer_link card_footer_link_right" href="https://github.com/kelvingraddick"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="card">
+                                    <div class="card_header">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="card_header_title">
+                                                        Mercedes Benz &middot; iOS app
+                                                    </div>
+                                                    <div class="card_header_description">
+                                                        The mobile app for the Mercedez Benz of Columbus, GA. Vehicle listings, appointments, and news.
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="card_header_icon" style="background-image: url('https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/mercedes-benz-icon.jpg');"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="card_footer">
+                                        <a class="card_footer_link" href="https://github.com/kelvingraddick"><i class="fas fa-info-circle"></i> Details</a>
+                                        <a class="card_footer_link card_footer_link_right" href="https://github.com/kelvingraddick"><i class="fab fa-github"></i> GitHub</a>
+                                    </div>
                                 </div>
                             </td>
                         </tr>
-                    </table>
-                    <div class="page_block_time">
-                        <i class="fas fa-laptop"></i>&nbsp;Website
-                    </div>
-                    <div class="page_block_button">
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
-                </div>
-                <div class="page_block_content_right" onclick="window.open('https://github.com/kelvingraddick');">
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="page_block_icon" style="background-image: url('https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/github-icon.png');"></div>
-                            </td>
-                            <td>
-                                <div class="page_block_description">
-                                    <p><b>..MORE ON GITHUB</b> &middot; My personal GitHub page with more of my programming projects and contributions.</p>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="page_block_time">
-                        <i class="fab fa-github"></i>&nbsp;GitHub page
-                    </div>
-                    <div class="page_block_button">
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
+                    </table> 
                 </div>
             </div>
             <?php
@@ -183,5 +245,15 @@
         </div>
         <?php include $_SERVER['DOCUMENT_ROOT'].'/js/main.php'; ?>
         <script src="https://airbit.com/js/embeds/html5/gatracking.js?gatracking=UA-64813359-1"></script>
+        <script src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/js/jquery.pause.min.js"></script>
+        <script>
+            $("#cards_right").scrollLeft(document.getElementById("cards_right").scrollWidth);
+            $(window).load(function() {
+                $("#cards_left").animate({ scrollLeft: document.getElementById("cards_left").scrollWidth - document.getElementById("cards_left").scrollLeft - $(".page_block").width() }, 10000, 'linear');
+                $("#cards_right").animate({ scrollLeft: document.getElementById("cards_right").scrollWidth - document.getElementById("cards_right").scrollLeft - $(".page_block").width() }, 10000, 'linear');
+            });
+            $("#cards_left").hover(function() { $("#cards_left").pause(); }, function() { $("#cards_left").resume(); });
+            $("#cards_right").hover(function() { $("#cards_right").pause(); }, function() { $("#cards_right").resume(); });
+        </script>
 	</body>
 </html>
