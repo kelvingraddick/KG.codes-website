@@ -36,7 +36,13 @@
                     <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/coding/"><h2>App + Website Maker</h2></a><span class="header">.</span>
                 </div>
                 <div class="page_block_description page_block_description_cards">
-                    <p>Hi. I'm Kelvin Graddick also known as KG.codes. I'm a software developer / programmer, app + website developer, and content creator. I'm all about digital creation.</p>
+                    <p>
+                    I'm a professional software developer who's been in the industry for ~8 years.
+                    I've built many websites, web app, mobile apps, services, APIs, and databases with ❤️.
+                    </p>
+                    <div class="page_block_link page_block_link_cards">
+                        <a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/coding/">Learn more about my coding&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a>
+                    </div>
                 </div>
                 <div id="cards_left" class="cards">
                     <table>
@@ -239,7 +245,7 @@
             ?>
             <?php
                 if (mysqli_num_rows(mysqli_query($database_connection, $latest_posts_query))) {
-                    echo '<div class="next_button"><a href="/?from='.($from + 10).'" rel="next">Previous Posts <i class="fa fa-arrow-right"></i></a></div>';
+                    echo '<div class="next_button"><a href="/?from='.($from + 10).'" rel="next">Previous Posts&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a></div>';
                 }
             ?>
         </div>

@@ -201,6 +201,15 @@ b {
     line-height: 24px;
 }
 
+.page_block_link {
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.page_block_link.page_block_link_cards {
+
+}
+
 .page_block_time {
     display: inline-block;
     margin-top: 20px;
@@ -483,7 +492,7 @@ a.card_footer_link {
     }
 
     .page_block.page_block_cards {
-        padding: 0px 0px 45px 0px;
+        padding: 0px 0px 15px 0px;
     }
 
     .page_block_title.page_block_title_cards {
