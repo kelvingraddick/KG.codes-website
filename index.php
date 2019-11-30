@@ -67,8 +67,8 @@
                                         </table>
                                     </div>
                                     <div class="card_footer">
-                                        <a class="card_footer_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/copy-paste-app-snippeta"><i class="fas fa-info-circle"></i> Details</a>
-                                        <a class="card_footer_link card_footer_link_right" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/copy-paste-app-snippeta"><i class="fab fa-github"></i> GitHub</a>
+                                        <a class="card_footer_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/copy-paste-app-snippeta" target="_blank"><i class="fas fa-info-circle"></i> Details</a>
+                                        <a class="card_footer_link card_footer_link_right" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/copy-paste-app-snippeta" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                     </div>
                                 </div>
                             </td>
@@ -92,8 +92,8 @@
                                         </table>
                                     </div>
                                     <div class="card_footer">
-                                        <a class="card_footer_link" href="https://www.linkify.bio"><i class="fas fa-info-circle"></i> Details</a>
-                                        <a class="card_footer_link card_footer_link_right" href="https://github.com/kelvingraddick/Linkify.Bio-website"><i class="fab fa-github"></i> GitHub</a>
+                                        <a class="card_footer_link" href="https://www.linkify.bio" target="_blank"><i class="fas fa-info-circle"></i> Details</a>
+                                        <a class="card_footer_link card_footer_link_right" href="https://github.com/kelvingraddick/Linkify.Bio-website" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                     </div>
                                 </div>
                             </td>
@@ -117,8 +117,8 @@
                                         </table>
                                     </div>
                                     <div class="card_footer">
-                                        <a class="card_footer_link" href="http://www.wavelinkllc.com"><i class="fas fa-info-circle"></i> Details</a>
-                                        <a class="card_footer_link card_footer_link_right" href="http://www.wavelinkllc.com"><i class="fab fa-github"></i> GitHub</a>
+                                        <a class="card_footer_link" href="http://www.wavelinkllc.com" target="_blank"><i class="fas fa-info-circle"></i> Details</a>
+                                        <a class="card_footer_link card_footer_link_right" href="http://www.wavelinkllc.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                     </div>
                                 </div>
                             </td>
@@ -148,8 +148,8 @@
                                         </table>
                                     </div>
                                     <div class="card_footer">
-                                        <a class="card_footer_link" href="https://github.com/kelvingraddick"><i class="fas fa-info-circle"></i> Details</a>
-                                        <a class="card_footer_link card_footer_link_right" href="https://github.com/kelvingraddick"><i class="fab fa-github"></i> GitHub</a>
+                                        <a class="card_footer_link" href="https://github.com/kelvingraddick" target="_blank"><i class="fas fa-info-circle"></i> Details</a>
+                                        <a class="card_footer_link card_footer_link_right" href="https://github.com/kelvingraddick" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                     </div>
                                 </div>
                             </td>
@@ -173,8 +173,8 @@
                                         </table>
                                     </div>
                                     <div class="card_footer">
-                                        <a class="card_footer_link" href="https://github.com/kelvingraddick"><i class="fas fa-info-circle"></i> Details</a>
-                                        <a class="card_footer_link card_footer_link_right" href="https://github.com/kelvingraddick"><i class="fab fa-github"></i> GitHub</a>
+                                        <a class="card_footer_link" href="https://kg.codes" target="_blank"><i class="fas fa-info-circle"></i> Details</a>
+                                        <a class="card_footer_link card_footer_link_right" href="https://github.com/kelvingraddick/KG.codes-website" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                     </div>
                                 </div>
                             </td>
@@ -198,8 +198,8 @@
                                         </table>
                                     </div>
                                     <div class="card_footer">
-                                        <a class="card_footer_link" href="https://github.com/kelvingraddick"><i class="fas fa-info-circle"></i> Details</a>
-                                        <a class="card_footer_link card_footer_link_right" href="https://github.com/kelvingraddick"><i class="fab fa-github"></i> GitHub</a>
+                                        <a class="card_footer_link" href="https://github.com/kelvingraddick/Mercedes-Benz-of-Columbus" target="_blank"><i class="fas fa-info-circle"></i> Details</a>
+                                        <a class="card_footer_link card_footer_link_right" href="https://github.com/kelvingraddick/Mercedes-Benz-of-Columbus" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                     </div>
                                 </div>
                             </td>
