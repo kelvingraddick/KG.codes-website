@@ -4,64 +4,99 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-  <loc>https://www.kgthemaker.com/</loc>
-  <lastmod>2018-11-17T15:47:14+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.kgthemaker.com/blog/</loc>
-  <lastmod>2018-11-17T15:47:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.kgthemaker.com/beats/</loc>
-  <lastmod>2018-11-17T15:47:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.kgthemaker.com/contact/</loc>
-  <lastmod>2018-11-17T15:47:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.kgthemaker.com/blog/copy-paste-app-snippeta/</loc>
-  <lastmod>2018-11-17T15:47:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.kgthemaker.com/blog/work-trip-to-israel-tel-aviv-old-jaffa-raanana/</loc>
-  <lastmod>2018-11-17T15:47:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.kgthemaker.com/blog/how-to-charge-your-iphone-faster/</loc>
-  <lastmod>2018-11-17T15:47:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.kgthemaker.com/blog/atlanta-chamblee-georgia-skyline-drone-capture-dji-spark/</loc>
-  <lastmod>2018-11-17T15:47:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.kgthemaker.com/blog/why-we-neglect-our-linkedin-profiles/</loc>
-  <lastmod>2018-11-17T15:47:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.kgthemaker.com/blog/creating-the-perfect-business-logo-online/</loc>
-  <lastmod>2018-11-17T15:47:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.kgthemaker.com/blog/how-does-ebates-work-ebates-review/</loc>
-  <lastmod>2018-11-17T15:47:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.kgthemaker.com/?from=10</loc>
-  <lastmod>2018-11-17T15:47:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+  <url>
+    <loc>https://www.kg.codes/</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/coding/</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/contact/</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/copy-paste-app-snippeta</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/technology-stacks-I-use-for-software-development</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/nike-foamposites-mobile-app-accepted</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/9-free-cool-web-apis-to-use-in-your-next-project</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/kg-the-maker-is-now-kg-codes</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/facebook-developer-conference-2019-F8</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/best-coffee-mug-for-digital-creators-ember-mug-review</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/how-does-ebates-work-ebates-review</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/work-trip-to-israel-tel-aviv-old-jaffa-raanana</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/how-to-charge-your-iphone-faster</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/?from=10</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/atlanta-chamblee-georgia-skyline-drone-capture-dji-spark</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/why-we-neglect-our-linkedin-profiles</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/blog/creating-the-perfect-business-logo-online</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://www.kg.codes/?from=20</loc>
+    <lastmod>2020-03-20T01:24:52+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
 </urlset>
