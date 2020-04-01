@@ -116,6 +116,11 @@ b {
 
 
 
+.page_title {
+    font-size: 32px;
+    line-height: 75px;
+}
+
 .page_block {
     position: relative;
     width: 100%;
@@ -438,6 +443,14 @@ a.card_footer_link {
     line-height: 24px;
     color: #262626;
     cursor: pointer;
+}
+
+.contact_row {
+    width: 100%;
+}
+
+.contact_row td:nth-child(2) {
+    padding-left: 10px;
 }
 
 
