@@ -61,6 +61,7 @@
                             </td>
                         </tr>
                     </table>
+                    <div class="contact_label">Join Email List?</div>
                     <input class="contact_radio" type="radio" name="join_email_list" value="0" checked="checked">&nbsp;Yes&nbsp;&nbsp;
                     <input class="contact_radio" type="radio" name="join_email_list" value="1">&nbsp;No&nbsp;&nbsp;
                     <br />
