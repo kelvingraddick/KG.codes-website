@@ -71,7 +71,7 @@
                 <?php
                     $latest_beats_query = "SELECT * FROM products WHERE is_published = 1 ORDER BY created_time DESC LIMIT 10 OFFSET $from";
                     $results = mysqli_query($database_connection, $latest_beats_query) or die(mysql_error());
-                    while ($beat = mysqli_fetch_array( $results, MYSQL_ASSOC )) { 
+                    while ($beat = mysqli_fetch_array( $results, MYSQLI_ASSOC )) { 
                         $beat_url = 'https://'.$_SERVER['SERVER_NAME'].'/beats/'.$beat['slug'];
                         echo 
                         '<div class="post_block_title">

@@ -25,7 +25,7 @@
         <?php
             $query = "SELECT * FROM blog_posts WHERE is_published = 1 ORDER BY created_time DESC";
             $results = mysqli_query($database_connection, $query) or die(mysql_error());
-            while ($post = mysqli_fetch_array($results, MYSQL_ASSOC)) { 
+            while ($post = mysqli_fetch_array($results, MYSQLI_ASSOC)) { 
                 $post_url = 'https://'.$_SERVER['SERVER_NAME'].'/blog/'.$post['slug'];
                 echo
                 '<item>
