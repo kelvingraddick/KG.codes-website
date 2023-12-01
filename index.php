@@ -255,12 +255,15 @@
         <script src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/js/jquery.pause.min.js"></script>
         <script>
             $("#cards_right").scrollLeft(document.getElementById("cards_right").scrollWidth);
+            // animated card scroll not working properly on Safari, so disabling
+            /*
             $(window).load(function() {
                 $("#cards_left").animate({ scrollLeft: document.getElementById("cards_left").scrollWidth - document.getElementById("cards_left").scrollLeft - $(".page_block").width() }, 10000, 'linear');
                 $("#cards_right").animate({ scrollLeft: document.getElementById("cards_right").scrollWidth - document.getElementById("cards_right").scrollLeft - $(".page_block").width() }, 10000, 'linear');
             });
             $("#cards_left").hover(function() { $("#cards_left").pause(); }, function() { $("#cards_left").resume(); });
             $("#cards_right").hover(function() { $("#cards_right").pause(); }, function() { $("#cards_right").resume(); });
+            */
         </script>
 	</body>
 </html>
