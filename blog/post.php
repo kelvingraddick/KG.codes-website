@@ -91,7 +91,7 @@
                             <i class="fab fa-pinterest full_post_social_icon"></i>
                         </a>
                     </div>
-                    <div class="post_body">
+                    <div class="content post_body">
                         <?php echo $post['content']; ?>
                     </div>
                     <div class="post_sub_title">

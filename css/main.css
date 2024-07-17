@@ -374,9 +374,16 @@ a.card_footer_link {
 }
 
 .post_body h2 {
-    margin: 26px 0px;
+    margin: 20px 0px 20px 0px;
     font-size: 22px;
+    font-weight: 700;
+    color: #4a4a4a;
     line-height: 20px;
+}
+
+.post_body a {
+    text-decoration: underline;
+    color: #475ec6;
 }
 
 .fb-comments {
