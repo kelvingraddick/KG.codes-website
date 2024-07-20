@@ -105,8 +105,8 @@
                                 <input class="contact_textbox" type="text" name="first_name" value="" required>
                             </td>
                             <td>
-                                <div class="contact_label">Last Name</div>
-                                <input class="contact_textbox" type="text" name="last_name" value="">
+                                <div class="contact_label">Last Name*</div>
+                                <input class="contact_textbox" type="text" name="last_name" value="" required>
                             </td>
                         </tr>
                     </table>
@@ -144,10 +144,18 @@
         <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
         <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js"></script>
         <script>
+            $.validator.addMethod("differentNames", function(value, element, params) {
+                return value !== $(params).val();
+            }, "First name and last name must be different.");
+
             $("#contact_form").validate({
                 rules: {
                     first_name: {
                         required: true
+                    },
+                    last_name: {
+                        required: true,
+                        differentNames: 'input[name="first_name"]'
                     },
                     email_address: {
                         required: true,
