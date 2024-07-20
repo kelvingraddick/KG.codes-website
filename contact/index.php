@@ -131,7 +131,7 @@
                     <button class="contact_button">Submit</button>
                     <?php
                         if ($failure == true) {
-                            echo '<br /><br /><div style="color:red;">reCAPTCHA failed! Please fill out the reCAPTCHA form.</div>';
+                            echo '<br /><br /><div style="color:red;">Invalid data entered and/or reCAPTCHA failed! Please refill out the form or reCAPTCHA.</div>';
                         }
                     ?>
                 </form>

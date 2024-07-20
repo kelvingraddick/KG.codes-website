@@ -31,18 +31,24 @@
 	$context = stream_context_create($options);
 	$verify = file_get_contents($url, false, $context);
     $captcha_success = json_decode($verify);
-    if ($captcha_success -> success == false) {
+    if ($first_name == $last_name) {
+        header("Location: index.php?failure=true");
+    } else if ($captcha_success -> success == false) {
 		header("Location: index.php?failure=true");
 	} else if ($captcha_success -> success == true) {
         if (!mysqli_num_rows(mysqli_query($database_connection, "SELECT email_address FROM contacts WHERE email_address = '$email_address'"))) {
-            if (mysqli_query($database_connection, "INSERT INTO contacts (first_name, last_name, email_address, phone_number, notes) values('$first_name', '$last_name', '$email_address', '$phone_number', '$notes')")) {
+            $query = mysqli_prepare($database_connection, "INSERT INTO contacts (first_name, last_name, email_address, phone_number, notes) values(?, ?, ?, ?, ?)");
+            mysqli_stmt_bind_param($query, 'sssss', $first_name, $last_name, $email_address, $phone_number, $notes);
+            if (mysqli_stmt_execute($query)) {
 
             } else {
 
             }
         } else {
             $updated_time = date("Y-m-d H:i:s");
-            if (mysqli_query($database_connection, "UPDATE contacts SET first_name = '$first_name', last_name = '$last_name', phone_number = '$phone_number', notes = '$notes', updated_time = '$updated_time' where email_address = '$email_address'")){ 
+            $query = mysqli_prepare($database_connection, "UPDATE contacts SET first_name = ?, last_name = ?, phone_number = ?, notes = ?, updated_time = ? where email_address = ?");
+            mysqli_stmt_bind_param($query, 'ssssss', $first_name, $last_name, $phone_number, $notes, $updated_time, $email_address);
+            if (mysqli_stmt_execute($query)) {
 
             } else {
 
