@@ -48,6 +48,7 @@
                     <meta name="twitter:title" content="{title}">
                     <meta name="twitter:description" content="{description}">
                     <meta name="twitter:image:src" content="{logo}">
+                    <meta name='impact-site-verification' value='1744506728' />
 EOF;
         $metatags = str_replace("{title}", $seo['title'], $metatags);
         $metatags = str_replace("{description}", $seo['description'], $metatags); 
