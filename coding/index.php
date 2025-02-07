@@ -42,7 +42,7 @@
                             </td>
                             <td>
                                 <div class="page_block_description">
-                                    <b>SNIPPETA IOS APP</b> &middot; Copy, paste, and manage snippets of text! Copy snippet text to your clipboard with a single tap; no highlighting/long-tapping!
+                                    <b>SNIPPETA IOS/MACOS APP</b> &middot; Copy, paste, and manage snippets of text! Copy snippet text to your clipboard with a single tap; no highlighting/long-tapping!
                                 </div>
                             </td>
                         </tr>

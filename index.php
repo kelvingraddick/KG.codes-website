@@ -55,7 +55,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="card_header_title">
-                                                        Snippeta &middot; iOS app
+                                                        Snippeta &middot; iOS/macOS app
                                                     </div>
                                                     <div class="card_header_description">
                                                         Copy, manage, and paste snippets of text to your clipboard with a single tap; no highlighting/long-tapping!
