@@ -4,6 +4,7 @@
 	error_reporting(-1);
 	include $_SERVER['DOCUMENT_ROOT'].'/utility/configuration.php';
     include $_SERVER['DOCUMENT_ROOT'].'/utility/common.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/utility/Parsedown.php';
 	$database_connection = connect_to_database();
     $setting = get_settings($database_connection);
     $seo = get_seo($database_connection, "blog");
@@ -12,6 +13,7 @@
 	if (!$result) { echo 'Could not find post by the slug specified.'; }
     $post = mysqli_fetch_assoc($result);
     $post_url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    $post_content = $post['type'] == 1 ? (new Parsedown())->text($post['content']) : $post['content'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -68,7 +70,7 @@
                     }
                 },
                 "description": "<?php echo clean_quotes($post['description']); ?>",
-                "articleBody": "<?php echo strip_tags(clean_quotes($post['content'])); ?>"
+                "articleBody": "<?php echo strip_tags(clean_quotes($post_content)); ?>"
             }
         </script>
         <div class="page_left">
@@ -84,7 +86,7 @@
                     </div>
                     <div class="post_sub_title">
                         <?php echo $post['author']; ?> &middot;
-                        <?php echo get_time_to_read($post['content']); ?> &middot;&nbsp;
+                        <?php echo get_time_to_read($post_content); ?> &middot;&nbsp;
                         <i class="fab fa-facebook full_post_social_icon" onclick="shareUrlToFacebook(this, '<?php echo $post_url; ?>');"></i> &nbsp;
                         <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode($post['title']); ?>&url=<?php echo $post_url; ?>&via=KGcodes" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
                         <a href="https://www.pinterest.com/pin/create/button/?url=<?php echo $post_url; ?>&media=<?php echo $post['tall_image_url']; ?>&description=<?php echo urlencode($post['title']); ?>" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
@@ -92,7 +94,7 @@
                         </a>
                     </div>
                     <div class="content post_body">
-                        <?php echo $post['content']; ?>
+                        <?php echo $post_content; ?>
                     </div>
                     <div class="post_sub_title">
                         Want to share this? &nbsp;&nbsp;
