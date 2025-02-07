@@ -49,19 +49,19 @@ b {
 
 .sidebar_header_icon {
     display: inline-block;
-    height: 80px;
-    width: 80px;
+    height: 90px;
+    width: 90px;
     border-radius: 40px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-image: url('../images/kg-the-maker-logo-portrait.png');
+    background-image: url('../images/KGcodes-icon.png');
     cursor: pointer;
 }
 
 .sidebar_header_logo {
     max-height: 50px;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-left: 10px;
 }
 
