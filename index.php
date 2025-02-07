@@ -38,7 +38,7 @@
                 </div>
                 <div class="page_block_description page_block_description_cards">
                     <p>
-                    I'm a professional software developer who's been in the industry for ~8 years.
+                    I'm a professional software developer who's been in the industry for ~12 years.
                     I've built many websites, web app, mobile apps, services, APIs, and databases with ❤️.
                     </p>
                     <div class="page_block_link page_block_link_cards">
@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="card_footer">
                                         <a class="card_footer_link" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/copy-paste-app-snippeta" target="_blank"><i class="fas fa-info-circle"></i> Details</a>
-                                        <a class="card_footer_link card_footer_link_right" href="https://<?php echo $_SERVER['SERVER_NAME']; ?>/blog/copy-paste-app-snippeta" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                        <a class="card_footer_link card_footer_link_right" href="https://github.com/kelvingraddick/Snippeta-app" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                     </div>
                                 </div>
                             </td>
@@ -168,7 +168,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="card_header_icon" style="background-image: url('https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-logo-portrait.png');"></div>
+                                                    <div class="card_header_icon" style="background-image: url('https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/KGcodes-icon.png');"></div>
                                                 </td>
                                             </tr>
                                         </table>
