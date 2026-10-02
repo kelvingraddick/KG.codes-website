@@ -30,12 +30,18 @@
                     <h1>Contact KG.codes</h1><span class="header">.</span>
                 </div>
                 <br />
+                <?php if (($_GET['notification'] ?? '') === 'failed') { ?>
+                Your questionnaire was saved, but the email notification could not be sent.<br>
+                Please email <a href="mailto:<?php echo htmlspecialchars($setting['email_address'], ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($setting['email_address'], ENT_QUOTES, 'UTF-8'); ?></a>
+                to let me know you submitted it. You do not need to fill out the questionnaire again.
+                <?php } else { ?>
                 Thank you for contacting KG.codes!<br>
                 I will be in touch soon to follow up on your questionnaire answers and to get you a quote!
                 <br><br>
                 In the meantime, feel free to connect with me faster using one of the social buttons on the side.
                 <br><br>
                 - KG.codes
+                <?php } ?>
                 <br>
             </div>
         </div>

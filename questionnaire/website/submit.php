@@ -1,6 +1,6 @@
 <?php
-    ini_set('display_errors',1);
-	ini_set('display_startup_errors',1);
+    ini_set('display_errors',0);
+	ini_set('display_startup_errors',0);
 	error_reporting(-1);
 	include $_SERVER['DOCUMENT_ROOT'].'/utility/configuration.php';
     include $_SERVER['DOCUMENT_ROOT'].'/utility/common.php';
@@ -8,6 +8,15 @@
 
     $database_connection = connect_to_database();
     $setting = get_settings($database_connection);
+
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        header('Location: index.php');
+        exit;
+    }
+    if (trim($_POST['first_name'] ?? '') === '' || !filter_var($_POST['email_address'] ?? '', FILTER_VALIDATE_EMAIL)) {
+        header('Location: index.php?invalid=true');
+        exit;
+    }
 
 	$first_name = addslashes($_POST['first_name']);
 	$last_name = addslashes($_POST['last_name']);
@@ -66,20 +75,27 @@
     $captcha_success = json_decode($verify);
     if ($captcha_success -> success == false) {
 		header("Location: index.php?failure=true");
+		exit;
 	} else if ($captcha_success -> success == true) {
         if (!mysqli_num_rows(mysqli_query($database_connection, "SELECT email_address FROM contacts WHERE email_address = '$email_address'"))) {
-            if (mysqli_query($database_connection, "INSERT INTO contacts (first_name, last_name, email_address, phone_number, notes) values('$first_name', '$last_name', '$email_address', '$phone_number', '$answers')")) {
+            if ($saved = mysqli_query($database_connection, "INSERT INTO contacts (first_name, last_name, email_address, phone_number, notes) values('$first_name', '$last_name', '$email_address', '$phone_number', '$answers')")) {
 
             } else {
 
             }
         } else {
             $updated_time = date("Y-m-d H:i:s");
-            if (mysqli_query($database_connection, "UPDATE contacts SET first_name = '$first_name', last_name = '$last_name', phone_number = '$phone_number', notes = '$answers', updated_time = '$updated_time' where email_address = '$email_address'")){ 
+            if ($saved = mysqli_query($database_connection, "UPDATE contacts SET first_name = '$first_name', last_name = '$last_name', phone_number = '$phone_number', notes = '$answers', updated_time = '$updated_time' where email_address = '$email_address'")){
 
             } else {
 
             }
+        }
+
+        if (!$saved) {
+            http_response_code(503);
+            echo 'Your questionnaire could not be saved. Please try again later or contact KG.codes directly.';
+            exit;
         }
 
         $email = array();
@@ -100,6 +116,7 @@
 
         $email['recipient_email_address'] = $setting['email_address'];
         $email['recipient_name'] = $setting['contact_name'];
+        $email['reply_to'] = stripslashes($email_address);
         $email['subject'] = $site_name.": You have a new inquiry from ".$first_name." ".$last_name."!";
         $content =
             $site_name.': You have a new inquiry from '.$first_name.' '.$last_name.'!<br>
@@ -110,8 +127,9 @@
             <br><br>
         ';
         $email['body'] = get_email_template($content, $setting);
-        send_email($email);
+        $notification = send_email($email);
         
-        header("Location: success.php");
+        header('Location: success.php'.($notification->success ? '' : '?notification=failed'));
+        exit;
     }
 ?>

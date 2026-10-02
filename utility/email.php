@@ -1,44 +1,63 @@
 <?php
 
     function send_email($parameters) {
-        $url = "https://api.sendgrid.com/v3/mail/send";
-        $content = '{
-            "personalizations": [
-                {
-                    "to": [
-                        {
-                            "email": '.json_encode($parameters['recipient_email_address']).',
-                            "name": '.json_encode($parameters['recipient_name']).'
-                        }
-                    ],
-                    "subject": '.json_encode($parameters['subject']).'
-                }
-            ],
-            "from": {
-                "email": "kelvingraddick@kg.codes",
-                "name": "KG.codes"
-            },
-            "content": [
-                {
-                    "type": "text/html",
-                    "value": '.json_encode($parameters['body']).'
-                }
-            ]
-        }';
-        $curl = curl_init($url);
-        curl_setopt($curl, CURLOPT_HEADER, false);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, array("Content-type: application/json", "Authorization: Bearer ".$GLOBALS['sendgrid_api_key']));
-        curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $content);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-        $curl_response = json_decode(curl_exec($curl));
-        $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-        if ($status != 202) { 
-            $curl_response -> error_message = "Error: call to URL $url failed with status $status, response ".json_encode($curl_response).", curl_error ".curl_error($curl).", curl_errno ".curl_errno($curl);
+        $api_key = $GLOBALS['resend_api_key'] ?? '';
+        $from = 'KG.codes <kelvingraddick@kg.codes>';
+        $result = (object) array('success' => false, 'id' => null, 'status' => 0);
+        if ($api_key === '') {
+            $result->error_message = 'Email delivery is not configured.';
+            error_log('KG.codes email: missing Resend configuration.');
+            return $result;
         }
+        if (!filter_var($parameters['recipient_email_address'] ?? '', FILTER_VALIDATE_EMAIL)) {
+            $result->error_message = 'Invalid email recipient.';
+            return $result;
+        }
+        $content = array(
+            'from' => $from,
+            'to' => array($parameters['recipient_email_address']),
+            'subject' => $parameters['subject'],
+            'html' => $parameters['body']
+        );
+        if (!empty($parameters['reply_to'])) {
+            if (!filter_var($parameters['reply_to'], FILTER_VALIDATE_EMAIL)) {
+                $result->error_message = 'Invalid reply address.';
+                return $result;
+            }
+            $content['reply_to'] = $parameters['reply_to'];
+        }
+        $payload = json_encode($content);
+        if ($payload === false) {
+            $result->error_message = 'Unable to encode email content.';
+            error_log('KG.codes email: invalid email content.');
+            return $result;
+        }
+        $curl = curl_init('https://api.resend.com/emails');
+        curl_setopt_array($curl, array(
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => array('Content-Type: application/json', 'Authorization: Bearer '.$api_key),
+            CURLOPT_USERAGENT => 'KG.codes/1.0',
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => $payload,
+            CURLOPT_CONNECTTIMEOUT => 10,
+            CURLOPT_TIMEOUT => 20,
+            CURLOPT_SSL_VERIFYPEER => true,
+            CURLOPT_SSL_VERIFYHOST => 2
+        ));
+        $response_body = curl_exec($curl);
+        $result->status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        $curl_errno = curl_errno($curl);
         curl_close($curl);
-        return $curl_response;
+        $response = is_string($response_body) ? json_decode($response_body) : null;
+        $result->success = $result->status === 200 && !empty($response->id);
+        if ($result->success) {
+            $result->id = $response->id;
+        } else {
+            $result->error_message = 'Email delivery was not accepted.';
+            // Do not log credentials, submitted answers, or recipient details.
+            error_log('KG.codes email: Resend request failed; HTTP '.$result->status.'; cURL '.$curl_errno.'.');
+        }
+        return $result;
     }
 
     function get_email_template($content, $setting) {

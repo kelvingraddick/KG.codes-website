@@ -90,6 +90,9 @@
                     <br />
                     <button class="contact_button">Submit</button>
                     <?php
+                        if (isset($_GET['invalid'])) {
+                            echo '<br /><br /><div style="color:red;">Please enter your first name and a valid email address.</div>';
+                        }
                         if ($failure == true) {
                             echo '<br /><br /><div style="color:red;">reCAPTCHA failed! Please fill out the reCAPTCHA form.</div>';
                         }
