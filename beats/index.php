@@ -48,25 +48,12 @@
                     <h1>KG.codes Beats</h1><span class="header">.</span>
                 </div>
                 <br />
-                Hi. I am KG codes. Beat maker. Listen to and download hip-hop / pop / R&B beats produced by me and inspired by the greats.
+                Hi. I am KG codes. Beat maker. Browse hip-hop / pop / R&amp;B beats produced by me and inspired by the greats.
                 <br />
-                Download for free instantly and/or contact me directly for collaboration. Let me know if you use a beat; I want to hear the result!
-                <br /><br />
-                <iframe id="mfs_html5" src="https://airbit.com/widgets/html5/?uid=1593&config=464601" class="beat_store" height="700" frameborder="0" scrolling="no"></iframe>
+                <a href="/contact/">Contact me directly</a> for beat inquiries or collaboration. Let me know if you use a beat; I want to hear the result!
                 <br /><br />
                 <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-1.jpg" alt="KG.codes music producer" style="max-height: 300px; max-width: 49%; border-radius: 5px;" />
                 <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/kg-the-maker-beat-maker-2.jpg" alt="KG.codes music producer" style="max-height: 300px; max-width: 49%; border-radius: 5px;" />
-                <br /><br />
-                <h2>For a limited time, FREE download for all beats</h2>
-                <!--UNLIMITED ('Unlimited' buttons)-->
-                <br />
-                • instant MP3 download / unlimited use
-                <br /><br />
-                <h2>Buy EXCLUSIVELY with the 'Exclusive' buttons</h2>
-                <br />
-                • instant MP3 download / plus track-out stems / unlimited use / beat removed from store
-                <br /><br />
-                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/images/trust-seals.png" alt="trust seals" style="height: 150px;" />
                 <br /><br />
                 <?php
                     $latest_beats_query = "SELECT * FROM products WHERE is_published = 1 ORDER BY created_time DESC LIMIT 10 OFFSET $from";
@@ -80,7 +67,6 @@
                             </a>
                         </div>
                         <div class="post_sub_title">
-                            $'.$beat['sale_price'].' &middot;
                             <i class="fab fa-facebook full_post_social_icon" onclick="shareUrlToFacebook(this, \''.$beat_url.'\');"></i> &nbsp;
                             <a href="https://twitter.com/intent/tweet?text='.urlencode($beat['title']).'&url='.$beat_url.'&via=KGcodes" target="_blank"><i class="fab fa-twitter full_post_social_icon"></i></a> &nbsp;
                             <a href="https://www.pinterest.com/pin/create/button/?url='.$beat_url.'&media='.$beat['tall_image_url'].'&description='.urlencode($beat['title']).'" target="_blank" data-pin-do="buttonPin" data-pin-config="above">
@@ -88,8 +74,6 @@
                             </a>
                         </div>
                         <div class="post_body">
-                            <iframe src="https://airbit.com/widgets/solo/?b='.$beat['code'].'" height="160" frameborder="0" style="width: 100%;"></iframe>
-                            <br /><br />
                             '.$beat['long_description'].'
                         </div>';
                     }
@@ -105,6 +89,5 @@
             <?php include $_SERVER['DOCUMENT_ROOT'].'/header.php'; ?>
         </div>
         <?php include $_SERVER['DOCUMENT_ROOT'].'/js/main.php'; ?>
-        <script src="https://airbit.com/js/embeds/html5/gatracking.js?gatracking=UA-64813359-1"></script>
 	</body>
 </html>

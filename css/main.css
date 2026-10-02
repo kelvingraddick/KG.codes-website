@@ -391,11 +391,150 @@ a.card_footer_link {
     padding-top: 35px;
 }
 
+.newsletter-signup-card {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 20;
+    width: min(380px, calc(100% - 40px));
+    padding: 24px;
+    border: 1px solid rgba(38, 38, 38, 0.12);
+    border-radius: 8px;
+    background-color: #fafafa;
+    box-shadow: 0 8px 30px rgba(27, 31, 35, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 180ms ease, transform 180ms ease;
+}
 
+.newsletter-signup-card[hidden] {
+    display: none;
+}
 
-.beat_store {
-    width: 100%;
-    border: 2px solid rgba(183, 150, 24, 0.1);
+.newsletter-signup-card.newsletter-signup-card-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.newsletter-signup-card h2 {
+    padding-right: 24px;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.newsletter-signup-card p {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.newsletter-signup-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    padding: 4px 8px;
+    border: 0;
+    background: transparent;
+    color: #4a4a4a;
+    font-size: 24px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.newsletter-signup-form {
+    margin-top: 16px;
+}
+
+.newsletter-signup-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.newsletter-signup-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.newsletter-signup-controls input {
+    min-width: 0;
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #4a4a4a;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #262626;
+    font-size: 16px;
+}
+
+.newsletter-signup-controls button {
+    padding: 10px 14px;
+    border: 2px solid #4a4a4a;
+    border-radius: 5px;
+    background-color: #4a4a4a;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.newsletter-signup-controls button:disabled {
+    cursor: wait;
+    opacity: 0.65;
+}
+
+.newsletter-signup-close:focus-visible,
+.newsletter-signup-controls input:focus-visible,
+.newsletter-signup-controls button:focus-visible {
+    outline: 3px solid #475ec6;
+    outline-offset: 2px;
+}
+
+.newsletter-signup-note {
+    color: #6b6b6b;
+    font-size: 13px !important;
+}
+
+.newsletter-signup-status {
+    min-height: 22px;
+    font-weight: 600;
+}
+
+.newsletter-signup-status-success {
+    color: #267326;
+}
+
+.newsletter-signup-status-error {
+    color: #a12626;
+}
+
+.newsletter-signup-honeypot {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .newsletter-signup-card {
+        right: 10px;
+        bottom: 10px;
+        width: calc(100% - 20px);
+        padding: 20px;
+    }
+
+    .newsletter-signup-controls {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .newsletter-signup-card {
+        transition: none;
+    }
 }
 
 

@@ -108,6 +108,49 @@
                 </div>
             </div>
         </div>
+        <aside
+            id="newsletter-signup-card"
+            class="newsletter-signup-card"
+            aria-label="Email newsletter signup"
+            data-subscribe-url="/blog/newsletter-subscribe.php"
+            hidden
+        >
+            <button
+                id="newsletter-signup-close"
+                class="newsletter-signup-close"
+                type="button"
+                aria-label="Close email newsletter signup"
+            >&times;</button>
+            <h2>Want more from me?</h2>
+            <p>I’ll send you my latest thoughts on apps, websites, software development, and tech.</p>
+            <form id="newsletter-signup-form" class="newsletter-signup-form" novalidate>
+                <label class="newsletter-signup-label" for="newsletter-signup-email">Email address</label>
+                <div class="newsletter-signup-controls">
+                    <input
+                        id="newsletter-signup-email"
+                        name="EMAIL"
+                        type="email"
+                        autocomplete="email"
+                        inputmode="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+                    <button id="newsletter-signup-submit" type="submit">Subscribe</button>
+                </div>
+                <div class="newsletter-signup-honeypot" aria-hidden="true">
+                    <label for="newsletter-signup-honeypot">Leave this field blank</label>
+                    <input
+                        id="newsletter-signup-honeypot"
+                        name="b_bb6fbe9744331c32ef7a9d039_7d8d242227"
+                        type="text"
+                        tabindex="-1"
+                        value=""
+                    >
+                </div>
+            </form>
+            <p class="newsletter-signup-note">No spam. Unsubscribe anytime.</p>
+            <p id="newsletter-signup-status" class="newsletter-signup-status" role="status" aria-live="polite"></p>
+        </aside>
         <div class="sidebar_right">
             <?php include $_SERVER['DOCUMENT_ROOT'].'/header.php'; ?>
         </div>

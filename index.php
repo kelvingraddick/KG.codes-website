@@ -19,7 +19,6 @@
             echo get_metatags($seo, $setting); ; 
             include $_SERVER['DOCUMENT_ROOT'].'/css/main.php';
             include $_SERVER['DOCUMENT_ROOT'].'/js/onesignal.php';
-            include $_SERVER['DOCUMENT_ROOT'].'/js/mailchimp.php';
         ?>
 	</head>
 	<body>
@@ -251,7 +250,6 @@
             ?>
         </div>
         <?php include $_SERVER['DOCUMENT_ROOT'].'/js/main.php'; ?>
-        <script src="https://airbit.com/js/embeds/html5/gatracking.js?gatracking=UA-64813359-1"></script>
         <script src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/js/jquery.pause.min.js"></script>
         <script>
             $("#cards_right").scrollLeft(document.getElementById("cards_right").scrollWidth);

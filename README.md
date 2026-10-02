@@ -139,7 +139,7 @@ If an owner notification fails, the questionnaires keep the answers saved in the
 
 - **Google reCAPTCHA:** Contact and questionnaire forms use a public site key in their markup and `$recaptcha_secret_key` for server-side verification. Create keys for your own domains and replace both values.
 - **OneSignal:** Notification scripts and root service-worker files support browser push notifications. Replace the app configuration or remove the integration.
-- **Mailchimp:** Mailing-list markup and scripts are included in `js/mailchimp.php`. Replace account and audience-specific values.
+- **Mailchimp:** Individual blog posts show a custom newsletter signup after an engaged reader reaches the article midpoint. The public audience identifiers are rendered by `blog/post.php`, and the trigger and asynchronous submission behavior live in `js/main.js`. Replace the account and audience-specific values before deploying a fork.
 - **Analytics and social tracking:** Google Analytics and Facebook-related scripts live under `js/` or within individual pages. Use identifiers owned by your project.
 - **Third-party assets:** Some pages load content or assets from Google Fonts, Font Awesome, social networks, and other CDNs. Review their current terms, privacy impact, and availability before reuse.
 

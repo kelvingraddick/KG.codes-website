@@ -18,7 +18,6 @@
 		<?php 
             echo get_metatags($seo, $setting); ; 
             include $_SERVER['DOCUMENT_ROOT'].'/css/main.php';
-            include $_SERVER['DOCUMENT_ROOT'].'/js/mailchimp.php';
         ?>
 	</head>
 	<body>
